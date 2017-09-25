@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F01590961F79663E0078266C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590951F79663E0078266C /* AppDelegate.swift */; };
+		F01590981F79663E0078266C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590971F79663E0078266C /* ViewController.swift */; };
+		F015909B1F79663E0078266C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01590991F79663E0078266C /* Main.storyboard */; };
+		F015909E1F79663E0078266C /* Healthood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F015909C1F79663E0078266C /* Healthood.xcdatamodeld */; };
+		F01590A01F79663E0078266C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F015909F1F79663E0078266C /* Assets.xcassets */; };
+		F01590A31F79663E0078266C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01590A11F79663E0078266C /* LaunchScreen.storyboard */; };
+		F01590AE1F79663E0078266C /* HealthoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590AD1F79663E0078266C /* HealthoodTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F01590AA1F79663E0078266C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F015908A1F79663E0078266C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F01590911F79663E0078266C;
+			remoteInfo = Healthood;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F01590921F79663E0078266C /* Healthood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Healthood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F01590951F79663E0078266C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F01590971F79663E0078266C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F015909A1F79663E0078266C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F015909D1F79663E0078266C /* Healthood.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Healthood.xcdatamodel; sourceTree = "<group>"; };
+		F015909F1F79663E0078266C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F01590A21F79663E0078266C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F01590A41F79663E0078266C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F01590A91F79663E0078266C /* HealthoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F01590AD1F79663E0078266C /* HealthoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthoodTests.swift; sourceTree = "<group>"; };
+		F01590AF1F79663E0078266C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F015908F1F79663E0078266C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F01590A61F79663E0078266C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F01590891F79663E0078266C = {
+			isa = PBXGroup;
+			children = (
+				F01590941F79663E0078266C /* Healthood */,
+				F01590AC1F79663E0078266C /* HealthoodTests */,
+				F01590931F79663E0078266C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F01590931F79663E0078266C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F01590921F79663E0078266C /* Healthood.app */,
+				F01590A91F79663E0078266C /* HealthoodTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F01590941F79663E0078266C /* Healthood */ = {
+			isa = PBXGroup;
+			children = (
+				F01590951F79663E0078266C /* AppDelegate.swift */,
+				F01590971F79663E0078266C /* ViewController.swift */,
+				F01590991F79663E0078266C /* Main.storyboard */,
+				F015909F1F79663E0078266C /* Assets.xcassets */,
+				F01590A11F79663E0078266C /* LaunchScreen.storyboard */,
+				F01590A41F79663E0078266C /* Info.plist */,
+				F015909C1F79663E0078266C /* Healthood.xcdatamodeld */,
+			);
+			path = Healthood;
+			sourceTree = "<group>";
+		};
+		F01590AC1F79663E0078266C /* HealthoodTests */ = {
+			isa = PBXGroup;
+			children = (
+				F01590AD1F79663E0078266C /* HealthoodTests.swift */,
+				F01590AF1F79663E0078266C /* Info.plist */,
+			);
+			path = HealthoodTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F01590911F79663E0078266C /* Healthood */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F01590B21F79663E0078266C /* Build configuration list for PBXNativeTarget "Healthood" */;
+			buildPhases = (
+				F015908E1F79663E0078266C /* Sources */,
+				F015908F1F79663E0078266C /* Frameworks */,
+				F01590901F79663E0078266C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Healthood;
+			productName = Healthood;
+			productReference = F01590921F79663E0078266C /* Healthood.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F01590A81F79663E0078266C /* HealthoodTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F01590B51F79663E0078266C /* Build configuration list for PBXNativeTarget "HealthoodTests" */;
+			buildPhases = (
+				F01590A51F79663E0078266C /* Sources */,
+				F01590A61F79663E0078266C /* Frameworks */,
+				F01590A71F79663E0078266C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F01590AB1F79663E0078266C /* PBXTargetDependency */,
+			);
+			name = HealthoodTests;
+			productName = HealthoodTests;
+			productReference = F01590A91F79663E0078266C /* HealthoodTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F015908A1F79663E0078266C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Krystian Bujak";
+				TargetAttributes = {
+					F01590911F79663E0078266C = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 4VV3H7446H;
+						ProvisioningStyle = Automatic;
+					};
+					F01590A81F79663E0078266C = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 4VV3H7446H;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F01590911F79663E0078266C;
+					};
+				};
+			};
+			buildConfigurationList = F015908D1F79663E0078266C /* Build configuration list for PBXProject "Healthood" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F01590891F79663E0078266C;
+			productRefGroup = F01590931F79663E0078266C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F01590911F79663E0078266C /* Healthood */,
+				F01590A81F79663E0078266C /* HealthoodTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F01590901F79663E0078266C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F01590A31F79663E0078266C /* LaunchScreen.storyboard in Resources */,
+				F01590A01F79663E0078266C /* Assets.xcassets in Resources */,
+				F015909B1F79663E0078266C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F01590A71F79663E0078266C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F015908E1F79663E0078266C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F01590981F79663E0078266C /* ViewController.swift in Sources */,
+				F015909E1F79663E0078266C /* Healthood.xcdatamodeld in Sources */,
+				F01590961F79663E0078266C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F01590A51F79663E0078266C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F01590AE1F79663E0078266C /* HealthoodTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F01590AB1F79663E0078266C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F01590911F79663E0078266C /* Healthood */;
+			targetProxy = F01590AA1F79663E0078266C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F01590991F79663E0078266C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F015909A1F79663E0078266C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F01590A11F79663E0078266C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F01590A21F79663E0078266C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F01590B01F79663E0078266C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F01590B11F79663E0078266C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F01590B31F79663E0078266C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4VV3H7446H;
+				INFOPLIST_FILE = Healthood/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.booyac.Healthood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F01590B41F79663E0078266C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4VV3H7446H;
+				INFOPLIST_FILE = Healthood/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.booyac.Healthood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F01590B61F79663E0078266C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4VV3H7446H;
+				INFOPLIST_FILE = HealthoodTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.booyac.HealthoodTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Healthood.app/Healthood";
+			};
+			name = Debug;
+		};
+		F01590B71F79663E0078266C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4VV3H7446H;
+				INFOPLIST_FILE = HealthoodTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.booyac.HealthoodTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Healthood.app/Healthood";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F015908D1F79663E0078266C /* Build configuration list for PBXProject "Healthood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F01590B01F79663E0078266C /* Debug */,
+				F01590B11F79663E0078266C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F01590B21F79663E0078266C /* Build configuration list for PBXNativeTarget "Healthood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F01590B31F79663E0078266C /* Debug */,
+				F01590B41F79663E0078266C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F01590B51F79663E0078266C /* Build configuration list for PBXNativeTarget "HealthoodTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F01590B61F79663E0078266C /* Debug */,
+				F01590B71F79663E0078266C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F015909C1F79663E0078266C /* Healthood.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F015909D1F79663E0078266C /* Healthood.xcdatamodel */,
+			);
+			currentVersion = F015909D1F79663E0078266C /* Healthood.xcdatamodel */;
+			path = Healthood.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F015908A1F79663E0078266C /* Project object */;
+}
