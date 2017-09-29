@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F011AB361F7E48690040B2B7 /* LoginFacebookButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F011AB351F7E48690040B2B7 /* LoginFacebookButton.png */; };
+		F011AB381F7E4A000040B2B7 /* LoginButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F011AB371F7E4A000040B2B7 /* LoginButton.png */; };
 		F01590961F79663E0078266C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590951F79663E0078266C /* AppDelegate.swift */; };
 		F01590981F79663E0078266C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590971F79663E0078266C /* ViewController.swift */; };
 		F015909B1F79663E0078266C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01590991F79663E0078266C /* Main.storyboard */; };
@@ -14,6 +16,9 @@
 		F01590A01F79663E0078266C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F015909F1F79663E0078266C /* Assets.xcassets */; };
 		F01590A31F79663E0078266C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01590A11F79663E0078266C /* LaunchScreen.storyboard */; };
 		F01590AE1F79663E0078266C /* HealthoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590AD1F79663E0078266C /* HealthoodTests.swift */; };
+		F01590BA1F797AC30078266C /* LoginBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F01590B91F797AC30078266C /* LoginBackground.jpg */; };
+		F01590C81F7989C70078266C /* LoginBackground2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F01590C71F7989C70078266C /* LoginBackground2.jpg */; };
+		F0FF1D1E1F7AC46400B98013 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F0FF1D1D1F7AC46400B98013 /* Logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F011AB351F7E48690040B2B7 /* LoginFacebookButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginFacebookButton.png; sourceTree = "<group>"; };
+		F011AB371F7E4A000040B2B7 /* LoginButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginButton.png; sourceTree = "<group>"; };
 		F01590921F79663E0078266C /* Healthood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Healthood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01590951F79663E0078266C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F01590971F79663E0078266C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +45,9 @@
 		F01590A91F79663E0078266C /* HealthoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01590AD1F79663E0078266C /* HealthoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthoodTests.swift; sourceTree = "<group>"; };
 		F01590AF1F79663E0078266C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F01590B91F797AC30078266C /* LoginBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LoginBackground.jpg; sourceTree = "<group>"; };
+		F01590C71F7989C70078266C /* LoginBackground2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LoginBackground2.jpg; sourceTree = "<group>"; };
+		F0FF1D1D1F7AC46400B98013 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F011AB2E1F7E34FB0040B2B7 /* Additional Files */ = {
+			isa = PBXGroup;
+			children = (
+				F01590951F79663E0078266C /* AppDelegate.swift */,
+				F015909F1F79663E0078266C /* Assets.xcassets */,
+				F01590A11F79663E0078266C /* LaunchScreen.storyboard */,
+				F01590A41F79663E0078266C /* Info.plist */,
+			);
+			name = "Additional Files";
+			sourceTree = "<group>";
+		};
 		F01590891F79663E0078266C = {
 			isa = PBXGroup;
 			children = (
@@ -79,12 +100,10 @@
 		F01590941F79663E0078266C /* Healthood */ = {
 			isa = PBXGroup;
 			children = (
-				F01590951F79663E0078266C /* AppDelegate.swift */,
+				F01590B81F797AA90078266C /* Images */,
+				F011AB2E1F7E34FB0040B2B7 /* Additional Files */,
 				F01590971F79663E0078266C /* ViewController.swift */,
 				F01590991F79663E0078266C /* Main.storyboard */,
-				F015909F1F79663E0078266C /* Assets.xcassets */,
-				F01590A11F79663E0078266C /* LaunchScreen.storyboard */,
-				F01590A41F79663E0078266C /* Info.plist */,
 				F015909C1F79663E0078266C /* Healthood.xcdatamodeld */,
 			);
 			path = Healthood;
@@ -97,6 +116,19 @@
 				F01590AF1F79663E0078266C /* Info.plist */,
 			);
 			path = HealthoodTests;
+			sourceTree = "<group>";
+		};
+		F01590B81F797AA90078266C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F01590B91F797AC30078266C /* LoginBackground.jpg */,
+				F01590C71F7989C70078266C /* LoginBackground2.jpg */,
+				F0FF1D1D1F7AC46400B98013 /* Logo.png */,
+				F011AB351F7E48690040B2B7 /* LoginFacebookButton.png */,
+				F011AB371F7E4A000040B2B7 /* LoginButton.png */,
+			);
+			name = Images;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,8 +217,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F01590A31F79663E0078266C /* LaunchScreen.storyboard in Resources */,
+				F0FF1D1E1F7AC46400B98013 /* Logo.png in Resources */,
+				F011AB361F7E48690040B2B7 /* LoginFacebookButton.png in Resources */,
+				F011AB381F7E4A000040B2B7 /* LoginButton.png in Resources */,
+				F01590C81F7989C70078266C /* LoginBackground2.jpg in Resources */,
 				F01590A01F79663E0078266C /* Assets.xcassets in Resources */,
 				F015909B1F79663E0078266C /* Main.storyboard in Resources */,
+				F01590BA1F797AC30078266C /* LoginBackground.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +455,7 @@
 				F01590B41F79663E0078266C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F01590B51F79663E0078266C /* Build configuration list for PBXNativeTarget "HealthoodTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +464,7 @@
 				F01590B71F79663E0078266C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
