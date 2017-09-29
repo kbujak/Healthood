@@ -10,7 +10,7 @@
 		F011AB361F7E48690040B2B7 /* LoginFacebookButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F011AB351F7E48690040B2B7 /* LoginFacebookButton.png */; };
 		F011AB381F7E4A000040B2B7 /* LoginButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F011AB371F7E4A000040B2B7 /* LoginButton.png */; };
 		F01590961F79663E0078266C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590951F79663E0078266C /* AppDelegate.swift */; };
-		F01590981F79663E0078266C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590971F79663E0078266C /* ViewController.swift */; };
+		F01590981F79663E0078266C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590971F79663E0078266C /* LoginViewController.swift */; };
 		F015909B1F79663E0078266C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01590991F79663E0078266C /* Main.storyboard */; };
 		F015909E1F79663E0078266C /* Healthood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F015909C1F79663E0078266C /* Healthood.xcdatamodeld */; };
 		F01590A01F79663E0078266C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F015909F1F79663E0078266C /* Assets.xcassets */; };
@@ -36,7 +36,7 @@
 		F011AB371F7E4A000040B2B7 /* LoginButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginButton.png; sourceTree = "<group>"; };
 		F01590921F79663E0078266C /* Healthood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Healthood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01590951F79663E0078266C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F01590971F79663E0078266C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F01590971F79663E0078266C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F015909A1F79663E0078266C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F015909D1F79663E0078266C /* Healthood.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Healthood.xcdatamodel; sourceTree = "<group>"; };
 		F015909F1F79663E0078266C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 			children = (
 				F01590B81F797AA90078266C /* Images */,
 				F011AB2E1F7E34FB0040B2B7 /* Additional Files */,
-				F01590971F79663E0078266C /* ViewController.swift */,
+				F01590971F79663E0078266C /* LoginViewController.swift */,
 				F01590991F79663E0078266C /* Main.storyboard */,
 				F015909C1F79663E0078266C /* Healthood.xcdatamodeld */,
 			);
@@ -241,7 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F01590981F79663E0078266C /* ViewController.swift in Sources */,
+				F01590981F79663E0078266C /* LoginViewController.swift in Sources */,
 				F015909E1F79663E0078266C /* Healthood.xcdatamodeld in Sources */,
 				F01590961F79663E0078266C /* AppDelegate.swift in Sources */,
 			);
