@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F011AB3A1F7E6C510040B2B7 /* SeaButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F011AB391F7E6C510040B2B7 /* SeaButton.png */; };
 		F011AB3C1F7E6C580040B2B7 /* FacebookButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F011AB3B1F7E6C580040B2B7 /* FacebookButton.png */; };
+		F011AB3E1F7E83EB0040B2B7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F011AB3D1F7E83EB0040B2B7 /* RegisterViewController.swift */; };
 		F01590961F79663E0078266C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590951F79663E0078266C /* AppDelegate.swift */; };
 		F01590981F79663E0078266C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590971F79663E0078266C /* LoginViewController.swift */; };
 		F015909B1F79663E0078266C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01590991F79663E0078266C /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		F011AB391F7E6C510040B2B7 /* SeaButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SeaButton.png; sourceTree = "<group>"; };
 		F011AB3B1F7E6C580040B2B7 /* FacebookButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookButton.png; sourceTree = "<group>"; };
+		F011AB3D1F7E83EB0040B2B7 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F01590921F79663E0078266C /* Healthood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Healthood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01590951F79663E0078266C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F01590971F79663E0078266C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				F01590B81F797AA90078266C /* Images */,
 				F011AB2E1F7E34FB0040B2B7 /* Additional Files */,
 				F01590971F79663E0078266C /* LoginViewController.swift */,
+				F011AB3D1F7E83EB0040B2B7 /* RegisterViewController.swift */,
 				F01590991F79663E0078266C /* Main.storyboard */,
 				F015909C1F79663E0078266C /* Healthood.xcdatamodeld */,
 			);
@@ -244,6 +247,7 @@
 				F01590981F79663E0078266C /* LoginViewController.swift in Sources */,
 				F015909E1F79663E0078266C /* Healthood.xcdatamodeld in Sources */,
 				F01590961F79663E0078266C /* AppDelegate.swift in Sources */,
+				F011AB3E1F7E83EB0040B2B7 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
