@@ -1,0 +1,6 @@
+framework module Pods_Healthood {
+  umbrella header "Pods-Healthood-umbrella.h"
+
+  export *
+  module * { export * }
+}

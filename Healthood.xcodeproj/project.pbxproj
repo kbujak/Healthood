@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		477075C2731024C1A8E1B29C /* Pods_HealthoodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E150DC964CE7D5E012490D99 /* Pods_HealthoodTests.framework */; };
+		E0A690388162E7B2623CCD33 /* Pods_Healthood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D588E6BF39661DA2C78899 /* Pods_Healthood.framework */; };
 		F011AB3A1F7E6C510040B2B7 /* SeaButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F011AB391F7E6C510040B2B7 /* SeaButton.png */; };
 		F011AB3C1F7E6C580040B2B7 /* FacebookButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F011AB3B1F7E6C580040B2B7 /* FacebookButton.png */; };
 		F011AB3E1F7E83EB0040B2B7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F011AB3D1F7E83EB0040B2B7 /* RegisterViewController.swift */; };
@@ -33,6 +35,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2357E6C24F51F64DB09706EE /* Pods-HealthoodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthoodTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthoodTests/Pods-HealthoodTests.release.xcconfig"; sourceTree = "<group>"; };
+		5FF5C2F52B248AC96CC7EE67 /* Pods-Healthood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Healthood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Healthood/Pods-Healthood.debug.xcconfig"; sourceTree = "<group>"; };
+		855CE6AE9892EA61754DCB19 /* Pods-Healthood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Healthood.release.xcconfig"; path = "Pods/Target Support Files/Pods-Healthood/Pods-Healthood.release.xcconfig"; sourceTree = "<group>"; };
+		B9D588E6BF39661DA2C78899 /* Pods_Healthood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Healthood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E150DC964CE7D5E012490D99 /* Pods_HealthoodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthoodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECE0D1B9CE5D0E60CC948DEE /* Pods-HealthoodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthoodTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthoodTests/Pods-HealthoodTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F011AB391F7E6C510040B2B7 /* SeaButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SeaButton.png; sourceTree = "<group>"; };
 		F011AB3B1F7E6C580040B2B7 /* FacebookButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookButton.png; sourceTree = "<group>"; };
 		F011AB3D1F7E83EB0040B2B7 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A690388162E7B2623CCD33 /* Pods_Healthood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,12 +73,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				477075C2731024C1A8E1B29C /* Pods_HealthoodTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		190A7CAB3D018681DBC0E06F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9D588E6BF39661DA2C78899 /* Pods_Healthood.framework */,
+				E150DC964CE7D5E012490D99 /* Pods_HealthoodTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAD78B1F749206BDE9FD7D39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FF5C2F52B248AC96CC7EE67 /* Pods-Healthood.debug.xcconfig */,
+				855CE6AE9892EA61754DCB19 /* Pods-Healthood.release.xcconfig */,
+				ECE0D1B9CE5D0E60CC948DEE /* Pods-HealthoodTests.debug.xcconfig */,
+				2357E6C24F51F64DB09706EE /* Pods-HealthoodTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F011AB2E1F7E34FB0040B2B7 /* Additional Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +117,8 @@
 				F01590941F79663E0078266C /* Healthood */,
 				F01590AC1F79663E0078266C /* HealthoodTests */,
 				F01590931F79663E0078266C /* Products */,
+				CAD78B1F749206BDE9FD7D39 /* Pods */,
+				190A7CAB3D018681DBC0E06F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F01590B21F79663E0078266C /* Build configuration list for PBXNativeTarget "Healthood" */;
 			buildPhases = (
+				FA1E8538B704BA2C6B149205 /* [CP] Check Pods Manifest.lock */,
 				F015908E1F79663E0078266C /* Sources */,
 				F015908F1F79663E0078266C /* Frameworks */,
 				F01590901F79663E0078266C /* Resources */,
+				42E735DA211B8201CF42B29D /* [CP] Embed Pods Frameworks */,
+				12EFC65B7FD38A21B87C3839 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F01590B51F79663E0078266C /* Build configuration list for PBXNativeTarget "HealthoodTests" */;
 			buildPhases = (
+				4414E39B0506F6CF207D24E7 /* [CP] Check Pods Manifest.lock */,
 				F01590A51F79663E0078266C /* Sources */,
 				F01590A61F79663E0078266C /* Frameworks */,
 				F01590A71F79663E0078266C /* Resources */,
+				E5FE65B5F55ECB1703E09DE7 /* [CP] Embed Pods Frameworks */,
+				0416CDB817B2847E00A25812 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,6 +276,110 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0416CDB817B2847E00A25812 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthoodTests/Pods-HealthoodTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12EFC65B7FD38A21B87C3839 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Healthood/Pods-Healthood-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42E735DA211B8201CF42B29D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Healthood/Pods-Healthood-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Healthood/Pods-Healthood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4414E39B0506F6CF207D24E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthoodTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5FE65B5F55ECB1703E09DE7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthoodTests/Pods-HealthoodTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA1E8538B704BA2C6B149205 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Healthood-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F015908E1F79663E0078266C /* Sources */ = {
@@ -386,6 +528,7 @@
 		};
 		F01590B31F79663E0078266C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FF5C2F52B248AC96CC7EE67 /* Pods-Healthood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4VV3H7446H;
@@ -394,11 +537,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pl.booyac.Healthood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		F01590B41F79663E0078266C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 855CE6AE9892EA61754DCB19 /* Pods-Healthood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4VV3H7446H;
@@ -407,11 +552,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pl.booyac.Healthood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		F01590B61F79663E0078266C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECE0D1B9CE5D0E60CC948DEE /* Pods-HealthoodTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -427,6 +574,7 @@
 		};
 		F01590B71F79663E0078266C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2357E6C24F51F64DB09706EE /* Pods-HealthoodTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
