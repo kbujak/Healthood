@@ -12,6 +12,7 @@
 		F011AB3A1F7E6C510040B2B7 /* SeaButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F011AB391F7E6C510040B2B7 /* SeaButton.png */; };
 		F011AB3C1F7E6C580040B2B7 /* FacebookButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F011AB3B1F7E6C580040B2B7 /* FacebookButton.png */; };
 		F011AB3E1F7E83EB0040B2B7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F011AB3D1F7E83EB0040B2B7 /* RegisterViewController.swift */; };
+		F0158AA71F88F33800AC0285 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0158AA61F88F33800AC0285 /* Date.swift */; };
 		F01590961F79663E0078266C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590951F79663E0078266C /* AppDelegate.swift */; };
 		F01590981F79663E0078266C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590971F79663E0078266C /* LoginViewController.swift */; };
 		F015909B1F79663E0078266C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01590991F79663E0078266C /* Main.storyboard */; };
@@ -21,6 +22,10 @@
 		F01590AE1F79663E0078266C /* HealthoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590AD1F79663E0078266C /* HealthoodTests.swift */; };
 		F01590BA1F797AC30078266C /* LoginBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F01590B91F797AC30078266C /* LoginBackground.jpg */; };
 		F01590C81F7989C70078266C /* LoginBackground2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F01590C71F7989C70078266C /* LoginBackground2.jpg */; };
+		F0F962AC1F83C14C00432AB4 /* DataBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F962AB1F83C14C00432AB4 /* DataBaseProtocol.swift */; };
+		F0F962AE1F83C17000432AB4 /* RealmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F962AD1F83C17000432AB4 /* RealmController.swift */; };
+		F0F962B11F83CF3700432AB4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F962B01F83CF3700432AB4 /* User.swift */; };
+		F0F962B51F83DA1B00432AB4 /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F962B41F83DA1B00432AB4 /* RealmUser.swift */; };
 		F0FF1D1E1F7AC46400B98013 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F0FF1D1D1F7AC46400B98013 /* Logo.png */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +49,7 @@
 		F011AB391F7E6C510040B2B7 /* SeaButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SeaButton.png; sourceTree = "<group>"; };
 		F011AB3B1F7E6C580040B2B7 /* FacebookButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookButton.png; sourceTree = "<group>"; };
 		F011AB3D1F7E83EB0040B2B7 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F0158AA61F88F33800AC0285 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		F01590921F79663E0078266C /* Healthood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Healthood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01590951F79663E0078266C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F01590971F79663E0078266C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +63,10 @@
 		F01590AF1F79663E0078266C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F01590B91F797AC30078266C /* LoginBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LoginBackground.jpg; sourceTree = "<group>"; };
 		F01590C71F7989C70078266C /* LoginBackground2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LoginBackground2.jpg; sourceTree = "<group>"; };
+		F0F962AB1F83C14C00432AB4 /* DataBaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseProtocol.swift; sourceTree = "<group>"; };
+		F0F962AD1F83C17000432AB4 /* RealmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmController.swift; sourceTree = "<group>"; };
+		F0F962B01F83CF3700432AB4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F0F962B41F83DA1B00432AB4 /* RealmUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
 		F0FF1D1D1F7AC46400B98013 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +121,14 @@
 			name = "Additional Files";
 			sourceTree = "<group>";
 		};
+		F0158AA51F88F32100AC0285 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F0158AA61F88F33800AC0285 /* Date.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		F01590891F79663E0078266C = {
 			isa = PBXGroup;
 			children = (
@@ -134,10 +152,13 @@
 		F01590941F79663E0078266C /* Healthood */ = {
 			isa = PBXGroup;
 			children = (
+				F0158AA51F88F32100AC0285 /* Extension */,
+				F0F962A81F83C0FC00432AB4 /* ViewControllers */,
+				F0F962AF1F83CF2800432AB4 /* Models */,
+				F0F962AA1F83C12300432AB4 /* Controllers */,
+				F0F962A91F83C11500432AB4 /* Protocols */,
 				F01590B81F797AA90078266C /* Images */,
 				F011AB2E1F7E34FB0040B2B7 /* Additional Files */,
-				F01590971F79663E0078266C /* LoginViewController.swift */,
-				F011AB3D1F7E83EB0040B2B7 /* RegisterViewController.swift */,
 				F01590991F79663E0078266C /* Main.storyboard */,
 				F015909C1F79663E0078266C /* Healthood.xcdatamodeld */,
 			);
@@ -164,6 +185,48 @@
 			);
 			name = Images;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		F0F962A81F83C0FC00432AB4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F01590971F79663E0078266C /* LoginViewController.swift */,
+				F011AB3D1F7E83EB0040B2B7 /* RegisterViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F0F962A91F83C11500432AB4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F0F962AB1F83C14C00432AB4 /* DataBaseProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		F0F962AA1F83C12300432AB4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F0F962AD1F83C17000432AB4 /* RealmController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F0F962AF1F83CF2800432AB4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F0F962B21F83D9FC00432AB4 /* RealmModels */,
+				F0F962B01F83CF3700432AB4 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F0F962B21F83D9FC00432AB4 /* RealmModels */ = {
+			isa = PBXGroup;
+			children = (
+				F0F962B41F83DA1B00432AB4 /* RealmUser.swift */,
+			);
+			name = RealmModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,9 +450,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F01590981F79663E0078266C /* LoginViewController.swift in Sources */,
+				F0158AA71F88F33800AC0285 /* Date.swift in Sources */,
+				F0F962AC1F83C14C00432AB4 /* DataBaseProtocol.swift in Sources */,
+				F0F962B51F83DA1B00432AB4 /* RealmUser.swift in Sources */,
 				F015909E1F79663E0078266C /* Healthood.xcdatamodeld in Sources */,
+				F0F962AE1F83C17000432AB4 /* RealmController.swift in Sources */,
 				F01590961F79663E0078266C /* AppDelegate.swift in Sources */,
 				F011AB3E1F7E83EB0040B2B7 /* RegisterViewController.swift in Sources */,
+				F0F962B11F83CF3700432AB4 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

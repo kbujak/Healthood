@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    var dataBase: DataBaseProtocol?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +25,5 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
