@@ -9,6 +9,6 @@
 import Foundation
 
 protocol DataBaseProtocol{
-    func registerUser(with user: User)
-    func loginUser(with email: String, and password: String)
+    func registerUser(with user: User) throws 
+    func loginUser(with email: String, and password: String) throws -> User
 }

@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		477075C2731024C1A8E1B29C /* Pods_HealthoodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E150DC964CE7D5E012490D99 /* Pods_HealthoodTests.framework */; };
 		E0A690388162E7B2623CCD33 /* Pods_Healthood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D588E6BF39661DA2C78899 /* Pods_Healthood.framework */; };
+		F00D0F471F8BBCE7005C2AFD /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00D0F461F8BBCE7005C2AFD /* String.swift */; };
+		F00D0F4A1F8BBF22005C2AFD /* RegisterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00D0F491F8BBF22005C2AFD /* RegisterHelper.swift */; };
 		F011AB3A1F7E6C510040B2B7 /* SeaButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F011AB391F7E6C510040B2B7 /* SeaButton.png */; };
 		F011AB3C1F7E6C580040B2B7 /* FacebookButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F011AB3B1F7E6C580040B2B7 /* FacebookButton.png */; };
 		F011AB3E1F7E83EB0040B2B7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F011AB3D1F7E83EB0040B2B7 /* RegisterViewController.swift */; };
-		F0158AA71F88F33800AC0285 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0158AA61F88F33800AC0285 /* Date.swift */; };
 		F01590961F79663E0078266C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590951F79663E0078266C /* AppDelegate.swift */; };
 		F01590981F79663E0078266C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590971F79663E0078266C /* LoginViewController.swift */; };
 		F015909B1F79663E0078266C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01590991F79663E0078266C /* Main.storyboard */; };
@@ -22,6 +23,13 @@
 		F01590AE1F79663E0078266C /* HealthoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590AD1F79663E0078266C /* HealthoodTests.swift */; };
 		F01590BA1F797AC30078266C /* LoginBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F01590B91F797AC30078266C /* LoginBackground.jpg */; };
 		F01590C81F7989C70078266C /* LoginBackground2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F01590C71F7989C70078266C /* LoginBackground2.jpg */; };
+		F0829AFB1FAB4BD60026665E /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0829AFA1FAB4BD60026665E /* FoodTableViewCell.swift */; };
+		F0AC49391FB205FC004D3AED /* DateBaseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AC49381FB205FC004D3AED /* DateBaseErrors.swift */; };
+		F0C284451FAB311A005DAF5B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C284441FAB311A005DAF5B /* ProfileViewController.swift */; };
+		F0C284491FAB3797005DAF5B /* FoodListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C284481FAB3797005DAF5B /* FoodListTableViewController.swift */; };
+		F0DF556A1FB1DBF50013A5EB /* SingleDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DF55691FB1DBF50013A5EB /* SingleDishViewController.swift */; };
+		F0F2D9E41F8D54690019AB6C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D9E31F8D54690019AB6C /* UIViewController.swift */; };
+		F0F2D9E71F8D56BA0019AB6C /* RegisterErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D9E61F8D56BA0019AB6C /* RegisterErrors.swift */; };
 		F0F962AC1F83C14C00432AB4 /* DataBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F962AB1F83C14C00432AB4 /* DataBaseProtocol.swift */; };
 		F0F962AE1F83C17000432AB4 /* RealmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F962AD1F83C17000432AB4 /* RealmController.swift */; };
 		F0F962B11F83CF3700432AB4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F962B01F83CF3700432AB4 /* User.swift */; };
@@ -46,10 +54,12 @@
 		B9D588E6BF39661DA2C78899 /* Pods_Healthood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Healthood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E150DC964CE7D5E012490D99 /* Pods_HealthoodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthoodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE0D1B9CE5D0E60CC948DEE /* Pods-HealthoodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthoodTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthoodTests/Pods-HealthoodTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F00D0F451F8BBC43005C2AFD /* Objective-C-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objective-C-Bridging-Header.h"; sourceTree = "<group>"; };
+		F00D0F461F8BBCE7005C2AFD /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		F00D0F491F8BBF22005C2AFD /* RegisterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHelper.swift; sourceTree = "<group>"; };
 		F011AB391F7E6C510040B2B7 /* SeaButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SeaButton.png; sourceTree = "<group>"; };
 		F011AB3B1F7E6C580040B2B7 /* FacebookButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookButton.png; sourceTree = "<group>"; };
 		F011AB3D1F7E83EB0040B2B7 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		F0158AA61F88F33800AC0285 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		F01590921F79663E0078266C /* Healthood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Healthood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01590951F79663E0078266C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F01590971F79663E0078266C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +73,14 @@
 		F01590AF1F79663E0078266C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F01590B91F797AC30078266C /* LoginBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LoginBackground.jpg; sourceTree = "<group>"; };
 		F01590C71F7989C70078266C /* LoginBackground2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LoginBackground2.jpg; sourceTree = "<group>"; };
+		F0829AFA1FAB4BD60026665E /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		F0AC49381FB205FC004D3AED /* DateBaseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBaseErrors.swift; sourceTree = "<group>"; };
+		F0C284441FAB311A005DAF5B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F0C284481FAB3797005DAF5B /* FoodListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListTableViewController.swift; sourceTree = "<group>"; };
+		F0DF55691FB1DBF50013A5EB /* SingleDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDishViewController.swift; sourceTree = "<group>"; };
+		F0EFC4E91F8BE13A00998AA9 /* XButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XButton.png; sourceTree = "<group>"; };
+		F0F2D9E31F8D54690019AB6C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		F0F2D9E61F8D56BA0019AB6C /* RegisterErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterErrors.swift; sourceTree = "<group>"; };
 		F0F962AB1F83C14C00432AB4 /* DataBaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseProtocol.swift; sourceTree = "<group>"; };
 		F0F962AD1F83C17000432AB4 /* RealmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmController.swift; sourceTree = "<group>"; };
 		F0F962B01F83CF3700432AB4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -110,6 +128,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F00D0F481F8BBF08005C2AFD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F00D0F491F8BBF22005C2AFD /* RegisterHelper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		F011AB2E1F7E34FB0040B2B7 /* Additional Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +150,8 @@
 		F0158AA51F88F32100AC0285 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F0158AA61F88F33800AC0285 /* Date.swift */,
+				F00D0F461F8BBCE7005C2AFD /* String.swift */,
+				F0F2D9E31F8D54690019AB6C /* UIViewController.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -152,6 +179,9 @@
 		F01590941F79663E0078266C /* Healthood */ = {
 			isa = PBXGroup;
 			children = (
+				F0829AF91FAB4BB80026665E /* Views */,
+				F0F2D9E51F8D56900019AB6C /* Errors */,
+				F00D0F481F8BBF08005C2AFD /* Helpers */,
 				F0158AA51F88F32100AC0285 /* Extension */,
 				F0F962A81F83C0FC00432AB4 /* ViewControllers */,
 				F0F962AF1F83CF2800432AB4 /* Models */,
@@ -161,6 +191,7 @@
 				F011AB2E1F7E34FB0040B2B7 /* Additional Files */,
 				F01590991F79663E0078266C /* Main.storyboard */,
 				F015909C1F79663E0078266C /* Healthood.xcdatamodeld */,
+				F00D0F451F8BBC43005C2AFD /* Objective-C-Bridging-Header.h */,
 			);
 			path = Healthood;
 			sourceTree = "<group>";
@@ -177,6 +208,7 @@
 		F01590B81F797AA90078266C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F0EFC4E91F8BE13A00998AA9 /* XButton.png */,
 				F01590B91F797AC30078266C /* LoginBackground.jpg */,
 				F01590C71F7989C70078266C /* LoginBackground2.jpg */,
 				F0FF1D1D1F7AC46400B98013 /* Logo.png */,
@@ -187,11 +219,31 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		F0829AF91FAB4BB80026665E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F0829AFA1FAB4BD60026665E /* FoodTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F0F2D9E51F8D56900019AB6C /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				F0F2D9E61F8D56BA0019AB6C /* RegisterErrors.swift */,
+				F0AC49381FB205FC004D3AED /* DateBaseErrors.swift */,
+			);
+			name = Errors;
+			sourceTree = "<group>";
+		};
 		F0F962A81F83C0FC00432AB4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				F01590971F79663E0078266C /* LoginViewController.swift */,
 				F011AB3D1F7E83EB0040B2B7 /* RegisterViewController.swift */,
+				F0C284441FAB311A005DAF5B /* ProfileViewController.swift */,
+				F0C284481FAB3797005DAF5B /* FoodListTableViewController.swift */,
+				F0DF55691FB1DBF50013A5EB /* SingleDishViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -286,11 +338,13 @@
 					F01590911F79663E0078266C = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 4VV3H7446H;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					F01590A81F79663E0078266C = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 4VV3H7446H;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = F01590911F79663E0078266C;
 					};
@@ -378,11 +432,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Healthood/Pods-Healthood-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
@@ -450,12 +506,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				F01590981F79663E0078266C /* LoginViewController.swift in Sources */,
-				F0158AA71F88F33800AC0285 /* Date.swift in Sources */,
+				F0C284491FAB3797005DAF5B /* FoodListTableViewController.swift in Sources */,
+				F0DF556A1FB1DBF50013A5EB /* SingleDishViewController.swift in Sources */,
+				F0829AFB1FAB4BD60026665E /* FoodTableViewCell.swift in Sources */,
+				F00D0F471F8BBCE7005C2AFD /* String.swift in Sources */,
 				F0F962AC1F83C14C00432AB4 /* DataBaseProtocol.swift in Sources */,
+				F0F2D9E41F8D54690019AB6C /* UIViewController.swift in Sources */,
 				F0F962B51F83DA1B00432AB4 /* RealmUser.swift in Sources */,
+				F0F2D9E71F8D56BA0019AB6C /* RegisterErrors.swift in Sources */,
+				F00D0F4A1F8BBF22005C2AFD /* RegisterHelper.swift in Sources */,
 				F015909E1F79663E0078266C /* Healthood.xcdatamodeld in Sources */,
 				F0F962AE1F83C17000432AB4 /* RealmController.swift in Sources */,
 				F01590961F79663E0078266C /* AppDelegate.swift in Sources */,
+				F0C284451FAB311A005DAF5B /* ProfileViewController.swift in Sources */,
+				F0AC49391FB205FC004D3AED /* DateBaseErrors.swift in Sources */,
 				F011AB3E1F7E83EB0040B2B7 /* RegisterViewController.swift in Sources */,
 				F0F962B11F83CF3700432AB4 /* User.swift in Sources */,
 			);
@@ -540,11 +604,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Healthood/Objective-C-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -585,9 +650,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Healthood/Objective-C-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

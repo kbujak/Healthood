@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "93AA7F2C309E9A5CAA2EE2ACC1727ABA"
+               BlueprintIdentifier = "B3B0D0E44F4BB92DDA6E81577F6BFCAC"
                BuildableName = "Pods_Healthood.framework"
                BlueprintName = "Pods-Healthood"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -36,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "93AA7F2C309E9A5CAA2EE2ACC1727ABA"
+            BlueprintIdentifier = "B3B0D0E44F4BB92DDA6E81577F6BFCAC"
             BuildableName = "Pods_Healthood.framework"
             BlueprintName = "Pods-Healthood"
             ReferencedContainer = "container:Pods.xcodeproj">

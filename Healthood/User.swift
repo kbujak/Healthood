@@ -9,19 +9,29 @@
 import Foundation
 
 class User{
+    var id: String
     var name: String
     var surName: String
     var login: String
     var email: String
     var password: String
-    var birthday: Date
+    //var profileImage: NSData?
     
-    init(name: String, surName: String, login: String, email: String, password: String, birthday: Date){
+    init(name: String, surName: String, login: String, email: String, password: String) {
+        self.id = UUID().uuidString
         self.name = name
         self.surName = surName
         self.login = login
         self.email = email
         self.password = password
-        self.birthday = birthday
+    }
+    
+    init(realmUser: RealmUser){
+        self.id = realmUser.id
+        self.name = realmUser.name
+        self.surName = realmUser.surName
+        self.login = realmUser.login
+        self.email = realmUser.email
+        self.password = realmUser.password
     }
 }
