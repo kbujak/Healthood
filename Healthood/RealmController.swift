@@ -13,8 +13,8 @@ final class RealmController: DataBaseProtocol{
     
     let dbUser = "kbujak421@gmail.com"
     let dbUserPassword = "test123"
-    let serverPath = "http://34.240.47.19:9080"
-    let realmPath = "realm://34.240.47.19:9080/~/Healthood_0.1"
+    let serverPath = "http://34.249.221.35:9080"
+    let realmPath = "realm://34.249.221.35:9080/~/Healthood_0.1"
     var notificationToken: NotificationToken!
     var realm: Realm!
     
@@ -32,22 +32,31 @@ final class RealmController: DataBaseProtocol{
     
     public func registerUser(with userData: User) throws {
         if let realm = self.realm{
-//            if realm.objects(RealmUser.self).filter("email == %@ or login == %@", userData.email, userData.login).count > 0 { throw DateBaseErrors.credentialTaken }
+            guard realm.objects(RealmUser.self).filter("email == %@ or login == %@", userData.email, userData.login).count < 1 else { throw DateBaseErrors.credentialTaken }
+            let realmUser = RealmUser(user: userData)
             try! realm.write {
-                let realmUser = RealmUser(user: userData)
                 realm.add(realmUser)
             }
         }else{ throw DateBaseErrors.connectionError }
     }
     
-    public func loginUser(with email: String, and password: String) throws -> User{
+    public func loginUser(with email: String, and password: String) throws -> User?{
         if let realm = self.realm{
             if let realmUser = realm.objects(RealmUser.self).filter("email == %@", email).first{
                 if realmUser.password == String.SHA256("\(password)\(realmUser.salt)")!{
                     return User(realmUser: realmUser)
-                }else { throw DateBaseErrors.invalidPassword }
-            }else{ throw DateBaseErrors.invalidEmail }
+                }
+            }
+            return nil
         }else{ throw DateBaseErrors.connectionError }
     }
     
+    public func getUser(with id: String) throws -> User? {
+        if let realm = self.realm{
+            if let realmUser = realm.objects(RealmUser.self).filter("id == %@", id).first{
+                return User(realmUser: realmUser)
+            }
+            return nil
+        }else{ throw DateBaseErrors.connectionError }
+    }
 }

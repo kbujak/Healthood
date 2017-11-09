@@ -13,20 +13,22 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    var delegate = UIApplication.shared.delegate as! AppDelegate
+    var dataBaseDelegate: DataBaseProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addTapGestureRecognizer()
+        self.dataBaseDelegate = (UIApplication.shared.delegate as! AppDelegate).dataBaseDelegate
     }
     
     @IBAction func loginBtnPressed(_ sender: Any) {
         do{
             guard let email = loginTextField.text else { return }
-            guard let password = loginTextField.text else { return }
-            guard let db = delegate.dataBaseDelegate else { return }
-            let user = try db.loginUser(with: email, and: password)
-            UserDefaults.standard.set(user.id, forKey: "userId")
+            guard let password = passwordTextField.text else { return }
+            guard let db = dataBaseDelegate else { return }
+            guard let user = try db.loginUser(with: email, and: password) else { return }
+
+            UserDefaults.standard.set(user.id, forKey: "logInUserId")
             UserDefaults.standard.synchronize()
             performSegue(withIdentifier: "loginSegue", sender: self)
         }catch let dbError as DateBaseErrors{

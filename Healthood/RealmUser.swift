@@ -27,7 +27,7 @@ class RealmUser: Object{
         self.login = user.login
         self.email = user.email
         self.salt = String.randomString(length: 20)
-        self.password = String.SHA256("\(password)\(salt)")!
+        self.password = String.SHA256("\(user.password)\(salt)")!
     }
     
     override static func primaryKey() -> String? {

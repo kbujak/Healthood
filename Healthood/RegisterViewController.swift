@@ -18,12 +18,12 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
-    var dataBase: DataBaseProtocol?
+    var dataBaseDelegate: DataBaseProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addTapGestureRecognizer()
-        self.dataBase = (UIApplication.shared.delegate as! AppDelegate).dataBaseDelegate
+        self.dataBaseDelegate = (UIApplication.shared.delegate as! AppDelegate).dataBaseDelegate
     }
 
     @IBAction func registerUser(_ sender: Any) {
@@ -33,10 +33,11 @@ class RegisterViewController: UIViewController {
             guard let login = RegisterHelper.checkLogin(for: loginTextField.text) else { throw RegisterErrors.loginError }
             guard let passw = RegisterHelper.checkPassw(passwTextField.text, with: retPasswTextField.text) else { throw RegisterErrors.passwordError }
             guard let email = RegisterHelper.checkEmail(for: emailTextField.text) else { throw RegisterErrors.emailError }
-            guard let db = self.dataBase else { throw DateBaseErrors.connectionError }
+            guard let db = self.dataBaseDelegate else { throw DateBaseErrors.connectionError }
+            
             let user = User(name: name, surName: surname, login: login, email: email, password: passw)
             try db.registerUser(with: user)
-            UserDefaults.standard.set(user.id, forKey: "userId")
+            UserDefaults.standard.set(user.id, forKey: "logInUserId")
             UserDefaults.standard.synchronize()
             performSegue(withIdentifier: "registerSegue", sender: self)
         }catch let registerError as RegisterErrors {
