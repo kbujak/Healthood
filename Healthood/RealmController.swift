@@ -9,17 +9,21 @@
 import Foundation
 import RealmSwift
 
-final class RealmController: DataBaseProtocol{
-    
-    let dbUser = "kbujak421@gmail.com"
-    let dbUserPassword = "test123"
-    let serverPath = "http://34.249.221.35:9080"
-    let realmPath = "realm://34.249.221.35:9080/~/Healthood_0.1"
+final class RealmController: DateBaseFixture, DataBaseProtocol{
+        
     var notificationToken: NotificationToken!
     var realm: Realm!
+    let port = 9080
+    var realmServerPath:String {
+        return "http://\(serverPath):\(port)"   // "http://34.241.82.158"
+    }
+    var realmPath:String{
+        return "realm://\(serverPath):\(port)/~/Healthood_0.2"  //"realm://34.241.82.158/~/Healthood_0.2"
+    }
     
-    init(){
-        SyncUser.logIn(with: .usernamePassword(username: self.dbUser, password: self.dbUserPassword, register: false), server: URL(string: self.serverPath)!){
+    override init(){
+        super.init()
+        SyncUser.logIn(with: .usernamePassword(username: self.dbUser, password: self.dbUserPassword, register: false), server: URL(string: self.realmServerPath)!){
             user, error in
             guard let user = user else { return }
             DispatchQueue.main.async {
@@ -27,7 +31,7 @@ final class RealmController: DataBaseProtocol{
                 guard let realm = try? Realm(configuration: configuration) else { return }
                 self.realm = realm
             }
-        }
+        }        
     }
     
     public func registerUser(with userData: User) throws {
@@ -40,9 +44,9 @@ final class RealmController: DataBaseProtocol{
         }else{ throw DateBaseErrors.connectionError }
     }
     
-    public func loginUser(with email: String, and password: String) throws -> User?{
+    public func loginUser(with login: String, and password: String) throws -> User?{
         if let realm = self.realm{
-            if let realmUser = realm.objects(RealmUser.self).filter("email == %@", email).first{
+            if let realmUser = realm.objects(RealmUser.self).filter("login == %@", login).first{
                 if realmUser.password == String.SHA256("\(password)\(realmUser.salt)")!{
                     return User(realmUser: realmUser)
                 }
@@ -57,6 +61,16 @@ final class RealmController: DataBaseProtocol{
                 return User(realmUser: realmUser)
             }
             return nil
+        }else{ throw DateBaseErrors.connectionError }
+    }
+    
+    func changeUserProfileImage(with image: Data, for userId: String) throws {
+        if let realm = self.realm{
+            if let realmUser = realm.objects(RealmUser.self).filter("id == %@", userId).first{
+                try! realm.write {
+                    realmUser.profileImage = image
+                }
+            }else{ throw DateBaseErrors.invalidUserId }
         }else{ throw DateBaseErrors.connectionError }
     }
 }

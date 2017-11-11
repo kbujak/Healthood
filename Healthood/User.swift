@@ -15,15 +15,16 @@ class User{
     var login: String
     var email: String
     var password: String
-    //var profileImage: NSData?
+    var profileImage: Data?
     
-    init(name: String, surName: String, login: String, email: String, password: String) {
+    init(name: String, surName: String, login: String, email: String, password: String, profileImage: Data? = nil) {
         self.id = UUID().uuidString
         self.name = name
         self.surName = surName
         self.login = login
         self.email = email
         self.password = password
+        self.profileImage = profileImage
     }
     
     init(realmUser: RealmUser){

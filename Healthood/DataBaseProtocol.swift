@@ -12,4 +12,5 @@ protocol DataBaseProtocol{
     func registerUser(with user: User) throws 
     func loginUser(with email: String, and password: String) throws -> User?
     func getUser(with id: String) throws -> User?
+    func changeUserProfileImage(with image: Data, for userId: String) throws
 }

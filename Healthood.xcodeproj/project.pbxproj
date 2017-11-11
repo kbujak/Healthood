@@ -23,6 +23,8 @@
 		F01590AE1F79663E0078266C /* HealthoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590AD1F79663E0078266C /* HealthoodTests.swift */; };
 		F01590BA1F797AC30078266C /* LoginBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F01590B91F797AC30078266C /* LoginBackground.jpg */; };
 		F01590C81F7989C70078266C /* LoginBackground2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F01590C71F7989C70078266C /* LoginBackground2.jpg */; };
+		F0248DEB1FB71C52001EB309 /* PostImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0248DEA1FB71C52001EB309 /* PostImageHelper.swift */; };
+		F0248DEE1FB71CCF001EB309 /* DateBaseFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0248DED1FB71CCF001EB309 /* DateBaseFixture.swift */; };
 		F0829AFB1FAB4BD60026665E /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0829AFA1FAB4BD60026665E /* FoodTableViewCell.swift */; };
 		F0AC49391FB205FC004D3AED /* DateBaseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AC49381FB205FC004D3AED /* DateBaseErrors.swift */; };
 		F0C284451FAB311A005DAF5B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C284441FAB311A005DAF5B /* ProfileViewController.swift */; };
@@ -73,6 +75,8 @@
 		F01590AF1F79663E0078266C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F01590B91F797AC30078266C /* LoginBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LoginBackground.jpg; sourceTree = "<group>"; };
 		F01590C71F7989C70078266C /* LoginBackground2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LoginBackground2.jpg; sourceTree = "<group>"; };
+		F0248DEA1FB71C52001EB309 /* PostImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageHelper.swift; sourceTree = "<group>"; };
+		F0248DED1FB71CCF001EB309 /* DateBaseFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBaseFixture.swift; sourceTree = "<group>"; };
 		F0829AFA1FAB4BD60026665E /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		F0AC49381FB205FC004D3AED /* DateBaseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBaseErrors.swift; sourceTree = "<group>"; };
 		F0C284441FAB311A005DAF5B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				F00D0F491F8BBF22005C2AFD /* RegisterHelper.swift */,
+				F0248DEA1FB71C52001EB309 /* PostImageHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -219,6 +224,15 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		F0248DEC1FB71CA7001EB309 /* DataBaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F0F962AD1F83C17000432AB4 /* RealmController.swift */,
+				F0248DED1FB71CCF001EB309 /* DateBaseFixture.swift */,
+			);
+			name = DataBaseControllers;
+			sourceTree = "<group>";
+		};
 		F0829AF91FAB4BB80026665E /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,7 +273,7 @@
 		F0F962AA1F83C12300432AB4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F0F962AD1F83C17000432AB4 /* RealmController.swift */,
+				F0248DEC1FB71CA7001EB309 /* DataBaseControllers */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -510,6 +524,7 @@
 				F0DF556A1FB1DBF50013A5EB /* SingleDishViewController.swift in Sources */,
 				F0829AFB1FAB4BD60026665E /* FoodTableViewCell.swift in Sources */,
 				F00D0F471F8BBCE7005C2AFD /* String.swift in Sources */,
+				F0248DEB1FB71C52001EB309 /* PostImageHelper.swift in Sources */,
 				F0F962AC1F83C14C00432AB4 /* DataBaseProtocol.swift in Sources */,
 				F0F2D9E41F8D54690019AB6C /* UIViewController.swift in Sources */,
 				F0F962B51F83DA1B00432AB4 /* RealmUser.swift in Sources */,
@@ -519,6 +534,7 @@
 				F0F962AE1F83C17000432AB4 /* RealmController.swift in Sources */,
 				F01590961F79663E0078266C /* AppDelegate.swift in Sources */,
 				F0C284451FAB311A005DAF5B /* ProfileViewController.swift in Sources */,
+				F0248DEE1FB71CCF001EB309 /* DateBaseFixture.swift in Sources */,
 				F0AC49391FB205FC004D3AED /* DateBaseErrors.swift in Sources */,
 				F011AB3E1F7E83EB0040B2B7 /* RegisterViewController.swift in Sources */,
 				F0F962B11F83CF3700432AB4 /* User.swift in Sources */,

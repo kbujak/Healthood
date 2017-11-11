@@ -23,10 +23,10 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginBtnPressed(_ sender: Any) {
         do{
-            guard let email = loginTextField.text else { return }
+            guard let login = loginTextField.text else { return }
             guard let password = passwordTextField.text else { return }
             guard let db = dataBaseDelegate else { return }
-            guard let user = try db.loginUser(with: email, and: password) else { return }
+            guard let user = try db.loginUser(with: login, and: password) else { return }
 
             UserDefaults.standard.set(user.id, forKey: "logInUserId")
             UserDefaults.standard.synchronize()
