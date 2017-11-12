@@ -19,8 +19,9 @@ class FoodListTableViewController: UITableViewController {
     }
     /************* Outlets ***************/
     let addButton = UIButton.init(type: .custom)
+    var selectedRowIndexPath: IndexPath?
     /************* Variables *************/
-    var foodArray = [1]
+    var foodArray = [Food()]
     var cellHeights: [CGFloat] = []
     let kCloseCellHeight: CGFloat = 107
     let kOpenCellHeight: CGFloat = 390
@@ -35,7 +36,17 @@ class FoodListTableViewController: UITableViewController {
         performSegue(withIdentifier: "singleFoodSegue", sender: self)
     }
     
-    @IBAction func unwindToDishesListViewController(for segue: UIStoryboardSegue){}
+    @IBAction func unwindToDishesListViewController(for segue: UIStoryboardSegue){
+        if segue.identifier == "correctAddFoodSegue"{
+            if let addFoodVC = segue.source as? AddFoodViewController{
+                if let food = addFoodVC.food{
+                    foodArray.append(food)
+                    cellHeights.append(kCloseCellHeight)
+                    tableView.reloadData()
+                }
+            }
+        }
+    }
     
     private func setup() {
         cellHeights = Array(repeating: kCloseCellHeight, count: foodArray.count)
@@ -59,7 +70,12 @@ class FoodListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if let selectedRow = self.selectedRowIndexPath{
+//            self.tableView(self.tableView, didDeselectRowAt: selectedRow)
+//            self.selectedRowIndexPath = nil
+//        }
         guard case let cell as FoldingCell = tableView.cellForRow(at: indexPath) else {
+            selectedRowIndexPath = indexPath
             return
         }
         
@@ -92,60 +108,25 @@ class FoodListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "foodItemId", for: indexPath) as! FoldingCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "foodItemId", for: indexPath) as! FoodTableViewCell
         let durations: [TimeInterval] = [0.26, 0.2, 0.2, 0.2]
         cell.durationsForExpandedState = durations
         cell.durationsForCollapsedState = durations
+        foodArray[indexPath.row].owner.profileImage = #imageLiteral(resourceName: "profile_example")
+        cell.food = foodArray[indexPath.row]
+        cell.setup()
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10.0
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "singleFoodSegue"{
+            if let singleDishVC = segue.destination as? SingleDishViewController{
+                singleDishVC.food = self.foodArray[(self.tableView.indexPathForSelectedRow?.row)!]
+            }
+        }
     }
-    */
-
 }

@@ -6,6 +6,7 @@ target 'Healthood' do
   use_frameworks!
     pod 'RealmSwift', '~> 2.10.2'
     pod 'FoldingCell'
+    pod 'SDWebImage', '~> 4.0'
 
   # Pods for Healthood
 

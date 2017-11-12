@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -46,8 +47,11 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         if let logInUserId = UserDefaults.standard.object(forKey: "logInUserId") as? String{
             if let logInUser = try? dataBaseDelegate!.getUser(with: logInUserId){
                 if let logInUser = logInUser{
-                    if logInUser.profileImage != nil{
-                        profileImageView.image = UIImage(data: logInUser.profileImage!, scale: 1.0)
+                    if logInUser.profileImagePath != nil{
+                        if let db = dataBaseDelegate{
+                            let imageURL = "http://" + db.dataBaseIP + logInUser.profileImagePath!
+                            profileImageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.jpg"))
+                        }
                     }
                     loginLabel.text = logInUser.login
                     nameLabel.text = "\(logInUser.name) \(logInUser.surName)"
@@ -87,9 +91,12 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         profileImageView.image = image
         DispatchQueue.main.async {
-            self.postImageHelper.myImageUploadRequest(with: image)
+            if let db = self.dataBaseDelegate{
+                if let imageName = self.postImageHelper.myImageUploadRequest(with: image, for: self.nameLabel.text!, using: db.dataBaseType){
+                    try? db.changeUserProfileImage(with: imageName, for: UserDefaults.standard.object(forKey: "logInUserId") as! String)
+                }
+            }
         }
-        
         dismiss(animated:true, completion: nil)
     }
 }

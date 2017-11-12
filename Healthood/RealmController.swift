@@ -14,11 +14,15 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
     var notificationToken: NotificationToken!
     var realm: Realm!
     let port = 9080
+    var dataBaseType: DataBaseType = .realm
     var realmServerPath:String {
-        return "http://\(serverPath):\(port)"   // "http://34.241.82.158"
+        return "http://\(serverPath):\(port)"   // "http://SERVER_IP"
     }
     var realmPath:String{
-        return "realm://\(serverPath):\(port)/~/Healthood_0.2"  //"realm://34.241.82.158/~/Healthood_0.2"
+        return "realm://\(serverPath):\(port)/~/Healthood_0.3"  //"realm://SERVER_IP:9080/~/Healthood_*"
+    }
+    var dataBaseIP: String{
+        return serverPath
     }
     
     override init(){
@@ -64,11 +68,11 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
         }else{ throw DateBaseErrors.connectionError }
     }
     
-    func changeUserProfileImage(with image: Data, for userId: String) throws {
+    func changeUserProfileImage(with imageName: String, for userId: String) throws {
         if let realm = self.realm{
             if let realmUser = realm.objects(RealmUser.self).filter("id == %@", userId).first{
                 try! realm.write {
-                    realmUser.profileImage = image
+                    realmUser.profileImagePath = "/realm/" + imageName
                 }
             }else{ throw DateBaseErrors.invalidUserId }
         }else{ throw DateBaseErrors.connectionError }

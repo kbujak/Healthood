@@ -14,6 +14,8 @@
 		F011AB3A1F7E6C510040B2B7 /* SeaButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F011AB391F7E6C510040B2B7 /* SeaButton.png */; };
 		F011AB3C1F7E6C580040B2B7 /* FacebookButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F011AB3B1F7E6C580040B2B7 /* FacebookButton.png */; };
 		F011AB3E1F7E83EB0040B2B7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F011AB3D1F7E83EB0040B2B7 /* RegisterViewController.swift */; };
+		F0132A061FBA46B900CEC13B /* AddIngridientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0132A051FBA46B900CEC13B /* AddIngridientViewController.swift */; };
+		F0132A081FBA4A7200CEC13B /* FoodListErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0132A071FBA4A7200CEC13B /* FoodListErrors.swift */; };
 		F01590961F79663E0078266C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590951F79663E0078266C /* AppDelegate.swift */; };
 		F01590981F79663E0078266C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590971F79663E0078266C /* LoginViewController.swift */; };
 		F015909B1F79663E0078266C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01590991F79663E0078266C /* Main.storyboard */; };
@@ -23,12 +25,19 @@
 		F01590AE1F79663E0078266C /* HealthoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01590AD1F79663E0078266C /* HealthoodTests.swift */; };
 		F01590BA1F797AC30078266C /* LoginBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F01590B91F797AC30078266C /* LoginBackground.jpg */; };
 		F01590C81F7989C70078266C /* LoginBackground2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F01590C71F7989C70078266C /* LoginBackground2.jpg */; };
+		F01BFD9B1FB9FE1F00E907D4 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01BFD9A1FB9FE1F00E907D4 /* AddFoodViewController.swift */; };
+		F01E949C1FBADBED006CDF5A /* Ingridient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E949B1FBADBED006CDF5A /* Ingridient.swift */; };
+		F01E949E1FBAEDD3006CDF5A /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E949D1FBAEDD3006CDF5A /* Double.swift */; };
 		F0248DEB1FB71C52001EB309 /* PostImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0248DEA1FB71C52001EB309 /* PostImageHelper.swift */; };
 		F0248DEE1FB71CCF001EB309 /* DateBaseFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0248DED1FB71CCF001EB309 /* DateBaseFixture.swift */; };
+		F0412ED91FB994640014BEB0 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0412ED81FB994640014BEB0 /* NetworkErrors.swift */; };
+		F0412EDB1FB9A1D00014BEB0 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0412EDA1FB9A1D00014BEB0 /* Food.swift */; };
+		F06F14DF1FBA02A800C77EFF /* IngridientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06F14DE1FBA02A800C77EFF /* IngridientTableViewCell.swift */; };
 		F0829AFB1FAB4BD60026665E /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0829AFA1FAB4BD60026665E /* FoodTableViewCell.swift */; };
 		F0AC49391FB205FC004D3AED /* DateBaseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AC49381FB205FC004D3AED /* DateBaseErrors.swift */; };
 		F0C284451FAB311A005DAF5B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C284441FAB311A005DAF5B /* ProfileViewController.swift */; };
 		F0C284491FAB3797005DAF5B /* FoodListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C284481FAB3797005DAF5B /* FoodListTableViewController.swift */; };
+		F0D864511FB8B796001ECFBC /* DataBaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D864501FB8B796001ECFBC /* DataBaseType.swift */; };
 		F0DF556A1FB1DBF50013A5EB /* SingleDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DF55691FB1DBF50013A5EB /* SingleDishViewController.swift */; };
 		F0F2D9E41F8D54690019AB6C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D9E31F8D54690019AB6C /* UIViewController.swift */; };
 		F0F2D9E71F8D56BA0019AB6C /* RegisterErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D9E61F8D56BA0019AB6C /* RegisterErrors.swift */; };
@@ -62,6 +71,8 @@
 		F011AB391F7E6C510040B2B7 /* SeaButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SeaButton.png; sourceTree = "<group>"; };
 		F011AB3B1F7E6C580040B2B7 /* FacebookButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookButton.png; sourceTree = "<group>"; };
 		F011AB3D1F7E83EB0040B2B7 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F0132A051FBA46B900CEC13B /* AddIngridientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngridientViewController.swift; sourceTree = "<group>"; };
+		F0132A071FBA4A7200CEC13B /* FoodListErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListErrors.swift; sourceTree = "<group>"; };
 		F01590921F79663E0078266C /* Healthood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Healthood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01590951F79663E0078266C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F01590971F79663E0078266C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -75,12 +86,19 @@
 		F01590AF1F79663E0078266C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F01590B91F797AC30078266C /* LoginBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LoginBackground.jpg; sourceTree = "<group>"; };
 		F01590C71F7989C70078266C /* LoginBackground2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LoginBackground2.jpg; sourceTree = "<group>"; };
+		F01BFD9A1FB9FE1F00E907D4 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
+		F01E949B1FBADBED006CDF5A /* Ingridient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridient.swift; sourceTree = "<group>"; };
+		F01E949D1FBAEDD3006CDF5A /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		F0248DEA1FB71C52001EB309 /* PostImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageHelper.swift; sourceTree = "<group>"; };
 		F0248DED1FB71CCF001EB309 /* DateBaseFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBaseFixture.swift; sourceTree = "<group>"; };
+		F0412ED81FB994640014BEB0 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		F0412EDA1FB9A1D00014BEB0 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		F06F14DE1FBA02A800C77EFF /* IngridientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientTableViewCell.swift; sourceTree = "<group>"; };
 		F0829AFA1FAB4BD60026665E /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		F0AC49381FB205FC004D3AED /* DateBaseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBaseErrors.swift; sourceTree = "<group>"; };
 		F0C284441FAB311A005DAF5B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F0C284481FAB3797005DAF5B /* FoodListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListTableViewController.swift; sourceTree = "<group>"; };
+		F0D864501FB8B796001ECFBC /* DataBaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseType.swift; sourceTree = "<group>"; };
 		F0DF55691FB1DBF50013A5EB /* SingleDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDishViewController.swift; sourceTree = "<group>"; };
 		F0EFC4E91F8BE13A00998AA9 /* XButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XButton.png; sourceTree = "<group>"; };
 		F0F2D9E31F8D54690019AB6C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +175,7 @@
 			children = (
 				F00D0F461F8BBCE7005C2AFD /* String.swift */,
 				F0F2D9E31F8D54690019AB6C /* UIViewController.swift */,
+				F01E949D1FBAEDD3006CDF5A /* Double.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -184,9 +203,9 @@
 		F01590941F79663E0078266C /* Healthood */ = {
 			isa = PBXGroup;
 			children = (
+				F0D8644F1FB8B77D001ECFBC /* Enums */,
 				F0829AF91FAB4BB80026665E /* Views */,
 				F0F2D9E51F8D56900019AB6C /* Errors */,
-				F00D0F481F8BBF08005C2AFD /* Helpers */,
 				F0158AA51F88F32100AC0285 /* Extension */,
 				F0F962A81F83C0FC00432AB4 /* ViewControllers */,
 				F0F962AF1F83CF2800432AB4 /* Models */,
@@ -237,8 +256,17 @@
 			isa = PBXGroup;
 			children = (
 				F0829AFA1FAB4BD60026665E /* FoodTableViewCell.swift */,
+				F06F14DE1FBA02A800C77EFF /* IngridientTableViewCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		F0D8644F1FB8B77D001ECFBC /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				F0D864501FB8B796001ECFBC /* DataBaseType.swift */,
+			);
+			name = Enums;
 			sourceTree = "<group>";
 		};
 		F0F2D9E51F8D56900019AB6C /* Errors */ = {
@@ -246,6 +274,8 @@
 			children = (
 				F0F2D9E61F8D56BA0019AB6C /* RegisterErrors.swift */,
 				F0AC49381FB205FC004D3AED /* DateBaseErrors.swift */,
+				F0412ED81FB994640014BEB0 /* NetworkErrors.swift */,
+				F0132A071FBA4A7200CEC13B /* FoodListErrors.swift */,
 			);
 			name = Errors;
 			sourceTree = "<group>";
@@ -258,6 +288,8 @@
 				F0C284441FAB311A005DAF5B /* ProfileViewController.swift */,
 				F0C284481FAB3797005DAF5B /* FoodListTableViewController.swift */,
 				F0DF55691FB1DBF50013A5EB /* SingleDishViewController.swift */,
+				F01BFD9A1FB9FE1F00E907D4 /* AddFoodViewController.swift */,
+				F0132A051FBA46B900CEC13B /* AddIngridientViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -273,6 +305,7 @@
 		F0F962AA1F83C12300432AB4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F00D0F481F8BBF08005C2AFD /* Helpers */,
 				F0248DEC1FB71CA7001EB309 /* DataBaseControllers */,
 			);
 			name = Controllers;
@@ -283,6 +316,8 @@
 			children = (
 				F0F962B21F83D9FC00432AB4 /* RealmModels */,
 				F0F962B01F83CF3700432AB4 /* User.swift */,
+				F0412EDA1FB9A1D00014BEB0 /* Food.swift */,
+				F01E949B1FBADBED006CDF5A /* Ingridient.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -449,12 +484,14 @@
 				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -519,15 +556,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06F14DF1FBA02A800C77EFF /* IngridientTableViewCell.swift in Sources */,
 				F01590981F79663E0078266C /* LoginViewController.swift in Sources */,
+				F0132A081FBA4A7200CEC13B /* FoodListErrors.swift in Sources */,
+				F0412ED91FB994640014BEB0 /* NetworkErrors.swift in Sources */,
 				F0C284491FAB3797005DAF5B /* FoodListTableViewController.swift in Sources */,
 				F0DF556A1FB1DBF50013A5EB /* SingleDishViewController.swift in Sources */,
+				F01E949E1FBAEDD3006CDF5A /* Double.swift in Sources */,
 				F0829AFB1FAB4BD60026665E /* FoodTableViewCell.swift in Sources */,
 				F00D0F471F8BBCE7005C2AFD /* String.swift in Sources */,
 				F0248DEB1FB71C52001EB309 /* PostImageHelper.swift in Sources */,
 				F0F962AC1F83C14C00432AB4 /* DataBaseProtocol.swift in Sources */,
 				F0F2D9E41F8D54690019AB6C /* UIViewController.swift in Sources */,
+				F0D864511FB8B796001ECFBC /* DataBaseType.swift in Sources */,
 				F0F962B51F83DA1B00432AB4 /* RealmUser.swift in Sources */,
+				F01E949C1FBADBED006CDF5A /* Ingridient.swift in Sources */,
+				F01BFD9B1FB9FE1F00E907D4 /* AddFoodViewController.swift in Sources */,
+				F0132A061FBA46B900CEC13B /* AddIngridientViewController.swift in Sources */,
+				F0412EDB1FB9A1D00014BEB0 /* Food.swift in Sources */,
 				F0F2D9E71F8D56BA0019AB6C /* RegisterErrors.swift in Sources */,
 				F00D0F4A1F8BBF22005C2AFD /* RegisterHelper.swift in Sources */,
 				F015909E1F79663E0078266C /* Healthood.xcdatamodeld in Sources */,

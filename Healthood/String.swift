@@ -33,4 +33,13 @@ extension String{
         }
         return randomString
     }
+    
+    static func isEmptyOrNil(with text: String?) -> String?{
+        if let text = text{
+            if !text.isEmpty{
+                return text
+            }
+        }
+        return nil
+    }
 }

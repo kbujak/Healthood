@@ -17,7 +17,7 @@ class RealmUser: Object{
     dynamic var email: String = ""
     dynamic var password: String = ""
     dynamic var salt: String = ""
-    dynamic var profileImage: Data?
+    dynamic var profileImagePath: String?
     
     convenience init(user: User){
         self.init()
@@ -28,7 +28,7 @@ class RealmUser: Object{
         self.email = user.email
         self.salt = String.randomString(length: 20)
         self.password = String.SHA256("\(user.password)\(salt)")!
-        self.profileImage = user.profileImage
+        self.profileImagePath = user.profileImagePath
     }
     
     override static func primaryKey() -> String? {

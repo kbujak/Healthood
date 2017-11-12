@@ -10,29 +10,30 @@ import Foundation
 import UIKit
 
 class PostImageHelper{
+
     let serverPath: String!
     
     init(){
         self.serverPath = (UIApplication.shared.delegate as! AppDelegate).dataBaseDelegate.serverPath
     }
     
-    func myImageUploadRequest(with image: UIImage)
+    func myImageUploadRequest(with image: UIImage, for name: String, using dbType: DataBaseType) -> String?
     {
         let serverURL = URL(string: "http://" + self.serverPath + "/postImage.php")
         var request = URLRequest(url: serverURL!)
         request.httpMethod = "POST"
+        
         let param = [
-            "firstName"  : "Sergey",
-            "lastName"    : "Kargopolov",
-            "userId"    : "9"
+            "name"  : String.SHA256(name)! + ".jpg",
+            "dbType"    : dbType.rawValue
         ]
         let boundary = generateBoundaryString()        
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
         let imageData = UIImageJPEGRepresentation(image, 0.8)
         
-        if(imageData==nil)  { return; }
+        if(imageData==nil)  { return nil }
         request.httpBody = createBodyWithParameters(parameters: param, filePathKey: "file", imageDataKey: imageData! as NSData, boundary: boundary) as Data
-        print(request.httpBody)
+
         let task = URLSession.shared.dataTask(with: request){
             data, response, error in
             if error != nil{
@@ -52,6 +53,7 @@ class PostImageHelper{
             }
         }
         task.resume()
+        return param["name"]
     }
     
     
@@ -79,8 +81,6 @@ class PostImageHelper{
         
         return body
     }
-    
-    
     
     func generateBoundaryString() -> String {
         return "Boundary-\(NSUUID().uuidString)"

@@ -11,6 +11,20 @@ import FoldingCell
 
 class FoodTableViewCell: FoldingCell {
     
+    @IBOutlet var authorLabels: [UILabel]!
+    @IBOutlet var titleLabels: [UILabel]!
+    @IBOutlet var rateLabels: [UILabel]!
+    @IBOutlet var foodImages: [UIImageView]!
+    @IBOutlet weak var dataLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var caloriesLabel: UILabel!
+    @IBOutlet weak var proteinLabel: UILabel!
+    @IBOutlet weak var fatLabel: UILabel!
+    @IBOutlet weak var carbohydratesLabel: UILabel!
+    @IBOutlet weak var sugarLabel: UILabel!
+    @IBOutlet weak var userProfileImage: UIImageView!
+    
+    var food: Food?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,5 +46,30 @@ class FoodTableViewCell: FoldingCell {
         let durations = [0.26, 0.2, 0.2,0.2] // timing animation for each view
         return durations[itemIndex]
     }
-
+    
+    func setup(){
+        if let food = self.food{
+            for authorLabel in authorLabels{
+                authorLabel.text = food.owner.login
+            }
+            for titleLabel in titleLabels{
+                titleLabel.text = food.title
+            }
+            let avgRate = Double.average(from: food.rating)
+            for rateLabel in rateLabels{
+                rateLabel.text = "Ocena: \(avgRate)/5"
+            }
+            for foodImage in foodImages{
+                foodImage.image = food.image
+            }
+            if let profileImage = food.owner.profileImage { self.userProfileImage.image = profileImage }
+            self.dataLabel.text = String(describing: food.data)
+            self.nameLabel.text = food.owner.name + " " + food.owner.surName
+            self.caloriesLabel.text = "Kalorie: \(food.calories) kcal"
+            self.proteinLabel.text = String(food.protein) + " g"
+            self.carbohydratesLabel.text = String(food.carbohydrates) + " g"
+            self.fatLabel.text = String(food.fat) + " g"
+            self.sugarLabel.text = String(food.sugar) + " g"
+        }
+    }
 }

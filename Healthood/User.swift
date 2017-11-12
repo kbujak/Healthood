@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class User{
     var id: String
@@ -15,15 +16,17 @@ class User{
     var login: String
     var email: String
     var password: String
-    var profileImage: Data?
+    var profileImagePath: String?
+    var profileImage: UIImage?
     
-    init(name: String, surName: String, login: String, email: String, password: String, profileImage: Data? = nil) {
+    init(name: String, surName: String, login: String, email: String, password: String, profileImagePath: String? = nil, profileImage: UIImage? = nil) {
         self.id = UUID().uuidString
         self.name = name
         self.surName = surName
         self.login = login
         self.email = email
         self.password = password
+        self.profileImagePath = profileImagePath
         self.profileImage = profileImage
     }
     
@@ -34,5 +37,10 @@ class User{
         self.login = realmUser.login
         self.email = realmUser.email
         self.password = realmUser.password
+        self.profileImagePath = realmUser.profileImagePath
+    }
+    
+    convenience init(){
+        self.init(name: "Marian", surName: "Pazdzioch", login: "Pazdini", email: "testsdf@asda.", password: "asdasd")
     }
 }
