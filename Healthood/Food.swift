@@ -10,9 +10,10 @@ import Foundation
 import UIKit
 
 class Food{
-    var id: UUID
+    var id: String
     var owner: User
     var image: UIImage
+    var imagePath: String?
     var data: Date
     var ingridients: [Ingridient]
     var title: String
@@ -26,7 +27,7 @@ class Food{
     var sugar: Int
     
     init(owner: User, image: UIImage, ingridients: [Ingridient], title: String, description: String, durationTime: Int, calories: Int, protein: Int, fat: Int, carbohydrates: Int, sugar: Int){
-        self.id = UUID.init()
+        self.id = UUID.init().uuidString
         self.owner = owner
         self.image = image
         self.data = Date()
@@ -43,7 +44,7 @@ class Food{
     }
     
     init(){
-        self.id = UUID.init()
+        self.id = UUID.init().uuidString
         self.owner = User()
         self.image = #imageLiteral(resourceName: "LoginBackground2")
         self.data = Date()

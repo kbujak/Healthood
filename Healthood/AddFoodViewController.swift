@@ -23,9 +23,12 @@ class AddFoodViewController: UIViewController, UITableViewDataSource, UITableVie
     
     var ingridients = [Ingridient]()
     var food: Food?
+    var dataBaseDelegate: DataBaseProtocol!
+    lazy var postImageHelper = PostImageHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.dataBaseDelegate = (UIApplication.shared.delegate as! AppDelegate).dataBaseDelegate
         self.foodImageView.isUserInteractionEnabled = true
         self.foodImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(profileImgTapped)))
         self.ingridientsTableView.delegate = self
@@ -41,9 +44,21 @@ class AddFoodViewController: UIViewController, UITableViewDataSource, UITableVie
         do{
             guard let image = foodImageView.image else { throw FoodListErrors.emptyImage }
             guard let name = nameTextField.text, let caloriesText = caloriesTextField.text, let durationText = durationTextField.text, let proteinText = proteinTextField.text, let fatText = fatTextField.text, let carboText = carboTextField.text, let sugarText = sugarTextField.text, let description = descriptionTextView.text else { throw FoodListErrors.unfilledFields }
+            
             guard ingridients.count > 0 else { throw FoodListErrors.emptyIngridientsArray }
+            
             guard let calories = Int(caloriesText), let duration = Int(durationText), let proteins = Int(proteinText), let fat = Int(fatText), let carbo = Int(carboText), let sugar = Int(sugarText) else { throw FoodListErrors.invalidType }
-            self.food = Food(owner: User(), image: image, ingridients: ingridients, title: name, description: description, durationTime: duration, calories: calories, protein: proteins, fat: fat, carbohydrates: carbo, sugar: sugar)
+            
+            if let db = dataBaseDelegate{
+                if let user = try db.getUser(with: UserDefaults.standard.object(forKey: "logInUserId") as! String){
+                    self.food = Food(owner: user, image: image, ingridients: ingridients, title: name, description: description, durationTime: duration, calories: calories, protein: proteins, fat: fat, carbohydrates: carbo, sugar: sugar)
+
+                    if let imageName = self.postImageHelper.myImageUploadRequest(with: food!.image, for: self.food!.id, using: db.dataBaseType, imgType: .food){
+                        food?.imagePath = "/\(db.dataBaseType.rawValue)/\(ImageType.food.rawValue)/\(imageName)"
+                        try db.addFood(with: food!)
+                    }
+                }
+            }
             performSegue(withIdentifier: "correctAddFoodSegue", sender: self)
         }catch let error as Error{
             

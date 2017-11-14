@@ -30,8 +30,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         UserDefaults.standard.set(nil, forKey: "logInUserId")
         UserDefaults.standard.synchronize()
         performSegue(withIdentifier: "logoutSegue", sender: self)
-    }
-    
+    }  
     
     private func viewSetup(){
         profileImageView.layer.borderWidth = 2
@@ -92,7 +91,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         profileImageView.image = image
         DispatchQueue.main.async {
             if let db = self.dataBaseDelegate{
-                if let imageName = self.postImageHelper.myImageUploadRequest(with: image, for: self.nameLabel.text!, using: db.dataBaseType){
+                if let imageName = self.postImageHelper.myImageUploadRequest(with: image, for: self.nameLabel.text!, using: db.dataBaseType, imgType: .profile){
                     try? db.changeUserProfileImage(with: imageName, for: UserDefaults.standard.object(forKey: "logInUserId") as! String)
                 }
             }

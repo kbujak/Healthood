@@ -41,6 +41,10 @@
 		F0DF556A1FB1DBF50013A5EB /* SingleDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DF55691FB1DBF50013A5EB /* SingleDishViewController.swift */; };
 		F0F2D9E41F8D54690019AB6C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D9E31F8D54690019AB6C /* UIViewController.swift */; };
 		F0F2D9E71F8D56BA0019AB6C /* RegisterErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D9E61F8D56BA0019AB6C /* RegisterErrors.swift */; };
+		F0F2DFD11FBAFA70005E3D8B /* RealmIngridient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F2DFD01FBAFA70005E3D8B /* RealmIngridient.swift */; };
+		F0F2DFD31FBAFB2D005E3D8B /* RealmFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F2DFD21FBAFB2D005E3D8B /* RealmFood.swift */; };
+		F0F2DFD51FBAFFDD005E3D8B /* RealmRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F2DFD41FBAFFDD005E3D8B /* RealmRate.swift */; };
+		F0F2DFD71FBB02EF005E3D8B /* ImageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F2DFD61FBB02EF005E3D8B /* ImageType.swift */; };
 		F0F962AC1F83C14C00432AB4 /* DataBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F962AB1F83C14C00432AB4 /* DataBaseProtocol.swift */; };
 		F0F962AE1F83C17000432AB4 /* RealmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F962AD1F83C17000432AB4 /* RealmController.swift */; };
 		F0F962B11F83CF3700432AB4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F962B01F83CF3700432AB4 /* User.swift */; };
@@ -103,6 +107,10 @@
 		F0EFC4E91F8BE13A00998AA9 /* XButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XButton.png; sourceTree = "<group>"; };
 		F0F2D9E31F8D54690019AB6C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		F0F2D9E61F8D56BA0019AB6C /* RegisterErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterErrors.swift; sourceTree = "<group>"; };
+		F0F2DFD01FBAFA70005E3D8B /* RealmIngridient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmIngridient.swift; sourceTree = "<group>"; };
+		F0F2DFD21FBAFB2D005E3D8B /* RealmFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFood.swift; sourceTree = "<group>"; };
+		F0F2DFD41FBAFFDD005E3D8B /* RealmRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRate.swift; sourceTree = "<group>"; };
+		F0F2DFD61FBB02EF005E3D8B /* ImageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageType.swift; sourceTree = "<group>"; };
 		F0F962AB1F83C14C00432AB4 /* DataBaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseProtocol.swift; sourceTree = "<group>"; };
 		F0F962AD1F83C17000432AB4 /* RealmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmController.swift; sourceTree = "<group>"; };
 		F0F962B01F83CF3700432AB4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -265,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				F0D864501FB8B796001ECFBC /* DataBaseType.swift */,
+				F0F2DFD61FBB02EF005E3D8B /* ImageType.swift */,
 			);
 			name = Enums;
 			sourceTree = "<group>";
@@ -326,6 +335,9 @@
 			isa = PBXGroup;
 			children = (
 				F0F962B41F83DA1B00432AB4 /* RealmUser.swift */,
+				F0F2DFD01FBAFA70005E3D8B /* RealmIngridient.swift */,
+				F0F2DFD21FBAFB2D005E3D8B /* RealmFood.swift */,
+				F0F2DFD41FBAFFDD005E3D8B /* RealmRate.swift */,
 			);
 			name = RealmModels;
 			sourceTree = "<group>";
@@ -556,6 +568,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F2DFD51FBAFFDD005E3D8B /* RealmRate.swift in Sources */,
 				F06F14DF1FBA02A800C77EFF /* IngridientTableViewCell.swift in Sources */,
 				F01590981F79663E0078266C /* LoginViewController.swift in Sources */,
 				F0132A081FBA4A7200CEC13B /* FoodListErrors.swift in Sources */,
@@ -563,12 +576,15 @@
 				F0C284491FAB3797005DAF5B /* FoodListTableViewController.swift in Sources */,
 				F0DF556A1FB1DBF50013A5EB /* SingleDishViewController.swift in Sources */,
 				F01E949E1FBAEDD3006CDF5A /* Double.swift in Sources */,
+				F0F2DFD31FBAFB2D005E3D8B /* RealmFood.swift in Sources */,
 				F0829AFB1FAB4BD60026665E /* FoodTableViewCell.swift in Sources */,
 				F00D0F471F8BBCE7005C2AFD /* String.swift in Sources */,
 				F0248DEB1FB71C52001EB309 /* PostImageHelper.swift in Sources */,
 				F0F962AC1F83C14C00432AB4 /* DataBaseProtocol.swift in Sources */,
 				F0F2D9E41F8D54690019AB6C /* UIViewController.swift in Sources */,
 				F0D864511FB8B796001ECFBC /* DataBaseType.swift in Sources */,
+				F0F2DFD71FBB02EF005E3D8B /* ImageType.swift in Sources */,
+				F0F2DFD11FBAFA70005E3D8B /* RealmIngridient.swift in Sources */,
 				F0F962B51F83DA1B00432AB4 /* RealmUser.swift in Sources */,
 				F01E949C1FBADBED006CDF5A /* Ingridient.swift in Sources */,
 				F01BFD9B1FB9FE1F00E907D4 /* AddFoodViewController.swift in Sources */,

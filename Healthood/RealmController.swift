@@ -19,7 +19,7 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
         return "http://\(serverPath):\(port)"   // "http://SERVER_IP"
     }
     var realmPath:String{
-        return "realm://\(serverPath):\(port)/~/Healthood_0.3"  //"realm://SERVER_IP:9080/~/Healthood_*"
+        return "realm://\(serverPath):\(port)/~/Healthood_0.4"  //"realm://SERVER_IP:9080/~/Healthood_*"
     }
     var dataBaseIP: String{
         return serverPath
@@ -73,6 +73,17 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
             if let realmUser = realm.objects(RealmUser.self).filter("id == %@", userId).first{
                 try! realm.write {
                     realmUser.profileImagePath = "/realm/" + imageName
+                }
+            }else{ throw DateBaseErrors.invalidUserId }
+        }else{ throw DateBaseErrors.connectionError }
+    }
+    
+    func addFood(with food: Food) throws {
+        if let realm = self.realm{
+            if let realmUser = realm.objects(RealmUser.self).filter("id == %@", food.owner.id).first{
+                let realmFood = RealmFood(food: food, for: realmUser)
+                try! realm.write {
+                    realm.add(realmFood)
                 }
             }else{ throw DateBaseErrors.invalidUserId }
         }else{ throw DateBaseErrors.connectionError }

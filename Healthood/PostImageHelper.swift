@@ -17,15 +17,16 @@ class PostImageHelper{
         self.serverPath = (UIApplication.shared.delegate as! AppDelegate).dataBaseDelegate.serverPath
     }
     
-    func myImageUploadRequest(with image: UIImage, for name: String, using dbType: DataBaseType) -> String?
+    func myImageUploadRequest(with image: UIImage, for name: String, using dbType: DataBaseType, imgType: ImageType) -> String?
     {
         let serverURL = URL(string: "http://" + self.serverPath + "/postImage.php")
         var request = URLRequest(url: serverURL!)
         request.httpMethod = "POST"
         
         let param = [
-            "name"  : String.SHA256(name)! + ".jpg",
-            "dbType"    : dbType.rawValue
+            "name"  : String.SHA256(name + String.randomString(length: 15))! + ".jpg",
+            "dbType"    : dbType.rawValue,
+            "imgType"   : imgType.rawValue
         ]
         let boundary = generateBoundaryString()        
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
