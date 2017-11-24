@@ -18,4 +18,16 @@ class Ingridient{
         self.count = count
         self.unit = unit
     }
+    
+    init(realmIngridient: RealmIngridient){
+        self.name = realmIngridient.name
+        self.count = realmIngridient.count
+        self.unit = realmIngridient.unit
+    }
+    
+    init(){
+        self.name = "test"
+        self.count = 4
+        self.unit = "kg"
+    }
 }

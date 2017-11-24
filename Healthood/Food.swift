@@ -12,7 +12,7 @@ import UIKit
 class Food{
     var id: String
     var owner: User
-    var image: UIImage
+    var image: UIImage?
     var imagePath: String?
     var data: Date
     var ingridients: [Ingridient]
@@ -41,6 +41,28 @@ class Food{
         self.fat = fat
         self.carbohydrates = carbohydrates
         self.sugar = sugar
+    }
+    
+    init(realmFood: RealmFood, owner: User){
+        self.id = realmFood.id
+        self.owner = owner
+        self.imagePath = realmFood.imagePath
+        self.data = realmFood.data
+        var ingridients = [Ingridient]()
+        for ingridient in realmFood.ingridients{
+            ingridients.append(Ingridient(realmIngridient: ingridient))
+        }
+        self.ingridients = ingridients
+        self.title = realmFood.title
+        self.description = realmFood.description
+        self.rating = [0]
+        self.durationTime = realmFood.durationTime
+        self.calories = realmFood.calories
+        self.protein = realmFood.protein
+        self.fat = realmFood.fat
+        self.carbohydrates = realmFood.carbohydrates
+        self.sugar = realmFood.sugar
+        
     }
     
     init(){

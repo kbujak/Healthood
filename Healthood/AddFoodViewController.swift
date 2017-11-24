@@ -53,7 +53,7 @@ class AddFoodViewController: UIViewController, UITableViewDataSource, UITableVie
                 if let user = try db.getUser(with: UserDefaults.standard.object(forKey: "logInUserId") as! String){
                     self.food = Food(owner: user, image: image, ingridients: ingridients, title: name, description: description, durationTime: duration, calories: calories, protein: proteins, fat: fat, carbohydrates: carbo, sugar: sugar)
 
-                    if let imageName = self.postImageHelper.myImageUploadRequest(with: food!.image, for: self.food!.id, using: db.dataBaseType, imgType: .food){
+                    if let imageName = self.postImageHelper.myImageUploadRequest(with: food!.image!, for: self.food!.id, using: db.dataBaseType, imgType: .food){
                         food?.imagePath = "/\(db.dataBaseType.rawValue)/\(ImageType.food.rawValue)/\(imageName)"
                         try db.addFood(with: food!)
                     }

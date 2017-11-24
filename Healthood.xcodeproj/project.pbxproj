@@ -28,6 +28,7 @@
 		F01BFD9B1FB9FE1F00E907D4 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01BFD9A1FB9FE1F00E907D4 /* AddFoodViewController.swift */; };
 		F01E949C1FBADBED006CDF5A /* Ingridient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E949B1FBADBED006CDF5A /* Ingridient.swift */; };
 		F01E949E1FBAEDD3006CDF5A /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E949D1FBAEDD3006CDF5A /* Double.swift */; };
+		F02189651FC8461D00DD187E /* CensorshipHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02189641FC8461D00DD187E /* CensorshipHelper.swift */; };
 		F0248DEB1FB71C52001EB309 /* PostImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0248DEA1FB71C52001EB309 /* PostImageHelper.swift */; };
 		F0248DEE1FB71CCF001EB309 /* DateBaseFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0248DED1FB71CCF001EB309 /* DateBaseFixture.swift */; };
 		F0412ED91FB994640014BEB0 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0412ED81FB994640014BEB0 /* NetworkErrors.swift */; };
@@ -93,6 +94,7 @@
 		F01BFD9A1FB9FE1F00E907D4 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
 		F01E949B1FBADBED006CDF5A /* Ingridient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridient.swift; sourceTree = "<group>"; };
 		F01E949D1FBAEDD3006CDF5A /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		F02189641FC8461D00DD187E /* CensorshipHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CensorshipHelper.swift; sourceTree = "<group>"; };
 		F0248DEA1FB71C52001EB309 /* PostImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageHelper.swift; sourceTree = "<group>"; };
 		F0248DED1FB71CCF001EB309 /* DateBaseFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBaseFixture.swift; sourceTree = "<group>"; };
 		F0412ED81FB994640014BEB0 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		F00D0F481F8BBF08005C2AFD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F02189641FC8461D00DD187E /* CensorshipHelper.swift */,
 				F00D0F491F8BBF22005C2AFD /* RegisterHelper.swift */,
 				F0248DEA1FB71C52001EB309 /* PostImageHelper.swift */,
 			);
@@ -597,6 +600,7 @@
 				F01590961F79663E0078266C /* AppDelegate.swift in Sources */,
 				F0C284451FAB311A005DAF5B /* ProfileViewController.swift in Sources */,
 				F0248DEE1FB71CCF001EB309 /* DateBaseFixture.swift in Sources */,
+				F02189651FC8461D00DD187E /* CensorshipHelper.swift in Sources */,
 				F0AC49391FB205FC004D3AED /* DateBaseErrors.swift in Sources */,
 				F011AB3E1F7E83EB0040B2B7 /* RegisterViewController.swift in Sources */,
 				F0F962B11F83CF3700432AB4 /* User.swift in Sources */,

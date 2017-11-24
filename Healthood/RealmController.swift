@@ -19,7 +19,7 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
         return "http://\(serverPath):\(port)"   // "http://SERVER_IP"
     }
     var realmPath:String{
-        return "realm://\(serverPath):\(port)/~/Healthood_0.4"  //"realm://SERVER_IP:9080/~/Healthood_*"
+        return "realm://\(serverPath):\(port)/~/Healthood_0.5"  //"realm://SERVER_IP:9080/~/Healthood_*"
     }
     var dataBaseIP: String{
         return serverPath
@@ -27,6 +27,7 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
     
     override init(){
         super.init()
+        print(self.realmServerPath)
         SyncUser.logIn(with: .usernamePassword(username: self.dbUser, password: self.dbUserPassword, register: false), server: URL(string: self.realmServerPath)!){
             user, error in
             guard let user = user else { return }
@@ -43,7 +44,10 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
             guard realm.objects(RealmUser.self).filter("email == %@ or login == %@", userData.email, userData.login).count < 1 else { throw DateBaseErrors.credentialTaken }
             let realmUser = RealmUser(user: userData)
             try! realm.write {
+                let start = DispatchTime.now()
                 realm.add(realmUser)
+                let end = DispatchTime.now()
+                print(Double(end.uptimeNanoseconds - start.uptimeNanoseconds)/1000000000)
             }
         }else{ throw DateBaseErrors.connectionError }
     }
@@ -72,7 +76,7 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
         if let realm = self.realm{
             if let realmUser = realm.objects(RealmUser.self).filter("id == %@", userId).first{
                 try! realm.write {
-                    realmUser.profileImagePath = "/realm/" + imageName
+                    realmUser.profileImagePath = "/realm/profile/" + imageName
                 }
             }else{ throw DateBaseErrors.invalidUserId }
         }else{ throw DateBaseErrors.connectionError }
@@ -88,4 +92,25 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
             }else{ throw DateBaseErrors.invalidUserId }
         }else{ throw DateBaseErrors.connectionError }
     }
+    
+    func getFoods() throws -> [Food]? {
+        if let realm = self.realm{
+            let realmFoods = realm.objects(RealmFood.self)
+            if realmFoods.count > 0{
+                var foods = [Food]()
+                for realmFood in realmFoods{
+                    if let user = try getUser(with: realmFood.owner!.id){
+                        foods.append(Food(realmFood: realmFood, owner: user))
+                    }
+                }
+                return foods
+            }
+            return nil
+        }else{ throw DateBaseErrors.connectionError }
+    }
+    
+    func createFoods(for count: Int) throws {
+        throw RegisterErrors.emailError
+    }
+    
 }

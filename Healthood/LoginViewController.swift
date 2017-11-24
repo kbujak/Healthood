@@ -32,9 +32,9 @@ class LoginViewController: UIViewController {
             UserDefaults.standard.synchronize()
             performSegue(withIdentifier: "loginSegue", sender: self)
         }catch let dbError as DateBaseErrors{
-            
+
         }catch is Error{
-            
+
         }
     }
     

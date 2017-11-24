@@ -47,6 +47,28 @@ class RealmFood: Object{
         self.sugar = food.sugar
     }
     
+    convenience init(food: Food){
+        self.init()
+        self.id = food.id
+        self.owner = RealmUser(user: User())
+        self.imagePath = "food.imagePath"
+        self.data = Date()
+        var ingridients = [RealmIngridient]()
+        for i in food.ingridients{
+            ingridients.append(RealmIngridient(ingridient: i))
+        }
+        self.ingridients = List(ingridients)
+        self.title = food.title
+        self.descriptionn = food.description
+        self.rating = RealmRate(rates: food.rating)
+        self.durationTime = food.durationTime
+        self.calories = food.calories
+        self.protein = food.calories
+        self.fat = food.fat
+        self.carbohydrates = food.carbohydrates
+        self.sugar = food.sugar
+    }
+    
     override static func primaryKey() -> String? {
         return "id"
     }

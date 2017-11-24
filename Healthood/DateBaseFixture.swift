@@ -11,5 +11,5 @@ import Foundation
 class DateBaseFixture{
     let dbUser = "kbujak421@gmail.com"
     let dbUserPassword = "test123"
-    let serverPath = "52.212.232.189"
+    let serverPath = "127.0.0.1"
 }

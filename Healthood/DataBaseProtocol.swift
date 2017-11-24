@@ -17,4 +17,6 @@ protocol DataBaseProtocol{
     func getUser(with id: String) throws -> User?
     func changeUserProfileImage(with imageName: String, for userId: String) throws
     func addFood(with food: Food) throws
+    func getFoods() throws -> [Food]?
+    func createFoods(for count: Int) throws
 }

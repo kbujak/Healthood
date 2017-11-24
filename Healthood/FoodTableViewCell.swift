@@ -25,6 +25,7 @@ class FoodTableViewCell: FoldingCell {
     @IBOutlet weak var userProfileImage: UIImageView!
     
     var food: Food?
+    var serverIP: String?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -60,9 +61,15 @@ class FoodTableViewCell: FoldingCell {
                 rateLabel.text = "Ocena: \(avgRate)/5"
             }
             for foodImage in foodImages{
-                foodImage.image = food.image
+                if let foodImagePath = food.imagePath{
+                    let imageURL = "http://" + serverIP! + foodImagePath
+                    foodImage.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.jpg"))
+                }
             }
-            if let profileImage = food.owner.profileImage { self.userProfileImage.image = profileImage }
+            if let profileImagePath = food.owner.profileImagePath {
+                let imageURL = "http://" + serverIP! + profileImagePath
+                self.userProfileImage.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.jpg"))
+            }
             self.dataLabel.text = String(describing: food.data)
             self.nameLabel.text = food.owner.name + " " + food.owner.surName
             self.caloriesLabel.text = "Kalorie: \(food.calories) kcal"

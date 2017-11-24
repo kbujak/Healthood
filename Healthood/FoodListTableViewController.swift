@@ -21,14 +21,15 @@ class FoodListTableViewController: UITableViewController {
     let addButton = UIButton.init(type: .custom)
     var selectedRowIndexPath: IndexPath?
     /************* Variables *************/
-    var foodArray = [Food()]
+    var foodArray = [Food]()
     var cellHeights: [CGFloat] = []
     let kCloseCellHeight: CGFloat = 107
     let kOpenCellHeight: CGFloat = 390
-    
+    var dataBaseDelegate: DataBaseProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.dataBaseDelegate = (UIApplication.shared.delegate as! AppDelegate).dataBaseDelegate
         setup()
     }
     
@@ -49,6 +50,13 @@ class FoodListTableViewController: UITableViewController {
     }
     
     private func setup() {
+        do{
+            if let foods = try dataBaseDelegate.getFoods(){
+                self.foodArray = foods
+            }
+        }catch let error{
+            
+        }
         cellHeights = Array(repeating: kCloseCellHeight, count: foodArray.count)
         tableView.estimatedRowHeight = kCloseCellHeight
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -112,8 +120,8 @@ class FoodListTableViewController: UITableViewController {
         let durations: [TimeInterval] = [0.26, 0.2, 0.2, 0.2]
         cell.durationsForExpandedState = durations
         cell.durationsForCollapsedState = durations
-        foodArray[indexPath.row].owner.profileImage = #imageLiteral(resourceName: "profile_example")
         cell.food = foodArray[indexPath.row]
+        cell.serverIP = dataBaseDelegate.dataBaseIP
         cell.setup()
         return cell
     }
@@ -126,6 +134,7 @@ class FoodListTableViewController: UITableViewController {
         if segue.identifier == "singleFoodSegue"{
             if let singleDishVC = segue.destination as? SingleDishViewController{
                 singleDishVC.food = self.foodArray[(self.tableView.indexPathForSelectedRow?.row)!]
+                singleDishVC.serverIP = dataBaseDelegate.dataBaseIP
             }
         }
     }

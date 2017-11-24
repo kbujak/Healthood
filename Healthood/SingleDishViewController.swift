@@ -27,6 +27,7 @@ class SingleDishViewController: UIViewController {
     @IBOutlet weak var rateImageView: UIImageView!
     
     var food: Food?
+    var serverIP: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,8 +54,16 @@ class SingleDishViewController: UIViewController {
             ingridientListHeight.constant = CGFloat(food.ingridients.count * 20) + 20.0
             ingridientsTextView.text = ingridientText
             descriptionTextView.text = food.description
-            authorImageView.image = food.owner.profileImage
-            foodImageView.image = food.image
+            
+            if let profileImagePath = food.owner.profileImagePath {
+                let imageURL = "http://" + serverIP! + profileImagePath
+                self.authorImageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.jpg"))
+            }
+            
+            if let foodImagePath = food.imagePath{
+                let imageURL = "http://" + serverIP! + foodImagePath
+                foodImageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.jpg"))
+            }
         }
     }
 }
