@@ -15,4 +15,5 @@ enum RegisterErrors: String, Error{
     case loginTakenError = "Login is already taken"
     case passwordError = "Invalid password"
     case emailError = "Invalid email"
+    case vulgarismError = "Your data contain vulgar word"
 }

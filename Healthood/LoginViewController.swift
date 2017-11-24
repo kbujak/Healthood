@@ -10,9 +10,11 @@ import UIKit
 import RealmSwift
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
+    
     var dataBaseDelegate: DataBaseProtocol!
     
     override func viewDidLoad() {
@@ -26,18 +28,24 @@ class LoginViewController: UIViewController {
             guard let login = loginTextField.text else { return }
             guard let password = passwordTextField.text else { return }
             guard let db = dataBaseDelegate else { return }
-            guard let user = try db.loginUser(with: login, and: password) else { return }
-
+            guard let user = try db.loginUser(with: login, and: password) else { throw FoodListErrors.invalidCredentials }
+            
             UserDefaults.standard.set(user.id, forKey: "logInUserId")
             UserDefaults.standard.synchronize()
             performSegue(withIdentifier: "loginSegue", sender: self)
-        }catch let dbError as DateBaseErrors{
-
-        }catch is Error{
-
+        }catch let error{
+            if let foodListError = error as? FoodListErrors{
+                errorLabel.isHidden = false
+                errorLabel.text = foodListError.rawValue
+            }
         }
     }
-    
-    @IBAction func unwindToLoginVC(segue:UIStoryboardSegue) { }
+
+    @IBAction func unwindToLoginVC(segue:UIStoryboardSegue) {
+        if segue.identifier == "banSegue"{
+            errorLabel.isHidden = false
+            errorLabel.text = "Dostałeś bana"
+        }
+    }
 }
 

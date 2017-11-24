@@ -42,6 +42,7 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
     public func registerUser(with userData: User) throws {
         if let realm = self.realm{
             guard realm.objects(RealmUser.self).filter("email == %@ or login == %@", userData.email, userData.login).count < 1 else { throw DateBaseErrors.credentialTaken }
+            guard realm.objects(RealmDeletedUsersEmail.self).filter("email == %@", userData.email).count < 1 else { throw DateBaseErrors.bannedUser }
             let realmUser = RealmUser(user: userData)
             try! realm.write {
                 let start = DispatchTime.now()
@@ -56,6 +57,13 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
         if let realm = self.realm{
             if let realmUser = realm.objects(RealmUser.self).filter("login == %@", login).first{
                 if realmUser.password == String.SHA256("\(password)\(realmUser.salt)")!{
+                    if let realmBanContainer = realm.objects(RealmBanContainer.self).filter("userId == %@", realmUser.id).first{
+                        if realmBanContainer.level == 1{
+                            if Date() < realmBanContainer.punishementDate!{
+                                throw FoodListErrors.bannedUser
+                            }
+                        }
+                    }
                     return User(realmUser: realmUser)
                 }
             }
@@ -113,4 +121,30 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
         throw RegisterErrors.emailError
     }
     
+    func banUser(with userId: String) throws {
+        if let realm = self.realm{
+            if let realmBanContainer = realm.objects(RealmBanContainer.self).filter("userId == %@", userId).first{
+                if realmBanContainer.level == 0{
+                    try! realm.write {
+                        realmBanContainer.level += 1
+                        realmBanContainer.punishementDate = Date(timeIntervalSinceNow: 60)
+                    }
+                }else if realmBanContainer.level == 1{
+                    if let realmUser = realm.objects(RealmUser.self).filter("id == %@", userId).first{
+                        try! realm.write {
+                            realm.add(RealmDeletedUsersEmail(email: realmUser.email))
+                            realm.delete(realmUser)
+                            realm.delete(realmBanContainer)
+                        }
+                    }
+                }
+                
+            }else if realm.objects(RealmUser.self).filter("id == %@", userId).count > 0{
+                try! realm.write {
+                    realm.add(RealmBanContainer(userId: userId))
+                }
+            }else{ throw DateBaseErrors.invalidUserId }
+            
+        }else{ throw DateBaseErrors.connectionError }
+    }
 }

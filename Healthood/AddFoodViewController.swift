@@ -25,6 +25,7 @@ class AddFoodViewController: UIViewController, UITableViewDataSource, UITableVie
     var food: Food?
     var dataBaseDelegate: DataBaseProtocol!
     lazy var postImageHelper = PostImageHelper()
+    lazy var censorshipHelper = CensorshipHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +45,8 @@ class AddFoodViewController: UIViewController, UITableViewDataSource, UITableVie
         do{
             guard let image = foodImageView.image else { throw FoodListErrors.emptyImage }
             guard let name = nameTextField.text, let caloriesText = caloriesTextField.text, let durationText = durationTextField.text, let proteinText = proteinTextField.text, let fatText = fatTextField.text, let carboText = carboTextField.text, let sugarText = sugarTextField.text, let description = descriptionTextView.text else { throw FoodListErrors.unfilledFields }
-            
-            guard ingridients.count > 0 else { throw FoodListErrors.emptyIngridientsArray }
-            
+            guard censorshipHelper.isAllowedWord(name) else { throw FoodListErrors.vulgarismError }
+            guard ingridients.count > 0 else { throw FoodListErrors.emptyIngridientsArray }            
             guard let calories = Int(caloriesText), let duration = Int(durationText), let proteins = Int(proteinText), let fat = Int(fatText), let carbo = Int(carboText), let sugar = Int(sugarText) else { throw FoodListErrors.invalidType }
             
             if let db = dataBaseDelegate{
@@ -60,8 +60,18 @@ class AddFoodViewController: UIViewController, UITableViewDataSource, UITableVie
                 }
             }
             performSegue(withIdentifier: "correctAddFoodSegue", sender: self)
-        }catch let error as Error{
-            
+        }catch let error{
+            if let foodListError = error as? FoodListErrors{
+                switch foodListError{
+                case .vulgarismError:
+                    if let userId = UserDefaults.standard.object(forKey: "logInUserId") as? String{
+                        try! (dataBaseDelegate as! RealmController).banUser(with: userId)
+                    }
+                    performSegue(withIdentifier: "banSegue", sender: self)
+                default:
+                    showWarrning(with: foodListError.rawValue)
+                }
+            }
         }
     }
     

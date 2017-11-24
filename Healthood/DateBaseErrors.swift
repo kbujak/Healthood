@@ -14,4 +14,5 @@ enum DateBaseErrors: String, Error{
     case invalidPassword = "Invalid password"
     case credentialTaken = "Given credentials are taken"
     case invalidUserId = "User with given id doesn't exist"
+    case bannedUser = "Ten mail został zbanowany"
 }

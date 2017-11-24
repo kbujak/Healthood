@@ -13,4 +13,7 @@ enum FoodListErrors: String, Error{
     case invalidType = "You used improper type"
     case emptyImage = "You must add image"
     case emptyIngridientsArray = "You must add ingridients"
+    case vulgarismError = "Chciałeś dodać tekst z wulgaryzmem. Dostajesz ostrzezenie!"
+    case bannedUser = "Masz tymczasowego bana, musisz poczekac"
+    case invalidCredentials = "Złe dane"
 }

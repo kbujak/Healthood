@@ -19,6 +19,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     
     var dataBaseDelegate: DataBaseProtocol?
+    lazy var censorshipHelper = CensorshipHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +29,11 @@ class RegisterViewController: UIViewController {
 
     @IBAction func registerUser(_ sender: Any) {
         do{
-            guard let name = RegisterHelper.checkName(for: nameTextField.text) else { throw RegisterErrors.nameError }
-            guard let surname = RegisterHelper.checkSurname(for: surnameTextField.text) else { throw RegisterErrors.surnameError }
-            guard let login = RegisterHelper.checkLogin(for: loginTextField.text) else { throw RegisterErrors.loginError }
-            guard let passw = RegisterHelper.checkPassw(passwTextField.text, with: retPasswTextField.text) else { throw RegisterErrors.passwordError }
-            guard let email = RegisterHelper.checkEmail(for: emailTextField.text) else { throw RegisterErrors.emailError }
+            let name = try RegisterHelper.checkName(for: nameTextField.text)
+            let surname = try RegisterHelper.checkSurname(for: surnameTextField.text)
+            let login = try RegisterHelper.checkLogin(for: loginTextField.text)
+            let passw = try RegisterHelper.checkPassw(passwTextField.text, with: retPasswTextField.text)
+            let email = try RegisterHelper.checkEmail(for: emailTextField.text)
             guard let db = self.dataBaseDelegate else { throw DateBaseErrors.connectionError }
             
             let user = User(name: name, surName: surname, login: login, email: email, password: passw)

@@ -29,6 +29,8 @@
 		F01E949C1FBADBED006CDF5A /* Ingridient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E949B1FBADBED006CDF5A /* Ingridient.swift */; };
 		F01E949E1FBAEDD3006CDF5A /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E949D1FBAEDD3006CDF5A /* Double.swift */; };
 		F02189651FC8461D00DD187E /* CensorshipHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02189641FC8461D00DD187E /* CensorshipHelper.swift */; };
+		F02189671FC8626700DD187E /* RealmBanContainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02189661FC8626700DD187E /* RealmBanContainter.swift */; };
+		F02189691FC8686A00DD187E /* RealmDeletedUsersEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02189681FC8686A00DD187E /* RealmDeletedUsersEmail.swift */; };
 		F0248DEB1FB71C52001EB309 /* PostImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0248DEA1FB71C52001EB309 /* PostImageHelper.swift */; };
 		F0248DEE1FB71CCF001EB309 /* DateBaseFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0248DED1FB71CCF001EB309 /* DateBaseFixture.swift */; };
 		F0412ED91FB994640014BEB0 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0412ED81FB994640014BEB0 /* NetworkErrors.swift */; };
@@ -95,6 +97,8 @@
 		F01E949B1FBADBED006CDF5A /* Ingridient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridient.swift; sourceTree = "<group>"; };
 		F01E949D1FBAEDD3006CDF5A /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		F02189641FC8461D00DD187E /* CensorshipHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CensorshipHelper.swift; sourceTree = "<group>"; };
+		F02189661FC8626700DD187E /* RealmBanContainter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmBanContainter.swift; sourceTree = "<group>"; };
+		F02189681FC8686A00DD187E /* RealmDeletedUsersEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDeletedUsersEmail.swift; sourceTree = "<group>"; };
 		F0248DEA1FB71C52001EB309 /* PostImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageHelper.swift; sourceTree = "<group>"; };
 		F0248DED1FB71CCF001EB309 /* DateBaseFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBaseFixture.swift; sourceTree = "<group>"; };
 		F0412ED81FB994640014BEB0 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
@@ -341,6 +345,8 @@
 				F0F2DFD01FBAFA70005E3D8B /* RealmIngridient.swift */,
 				F0F2DFD21FBAFB2D005E3D8B /* RealmFood.swift */,
 				F0F2DFD41FBAFFDD005E3D8B /* RealmRate.swift */,
+				F02189661FC8626700DD187E /* RealmBanContainter.swift */,
+				F02189681FC8686A00DD187E /* RealmDeletedUsersEmail.swift */,
 			);
 			name = RealmModels;
 			sourceTree = "<group>";
@@ -584,12 +590,14 @@
 				F00D0F471F8BBCE7005C2AFD /* String.swift in Sources */,
 				F0248DEB1FB71C52001EB309 /* PostImageHelper.swift in Sources */,
 				F0F962AC1F83C14C00432AB4 /* DataBaseProtocol.swift in Sources */,
+				F02189671FC8626700DD187E /* RealmBanContainter.swift in Sources */,
 				F0F2D9E41F8D54690019AB6C /* UIViewController.swift in Sources */,
 				F0D864511FB8B796001ECFBC /* DataBaseType.swift in Sources */,
 				F0F2DFD71FBB02EF005E3D8B /* ImageType.swift in Sources */,
 				F0F2DFD11FBAFA70005E3D8B /* RealmIngridient.swift in Sources */,
 				F0F962B51F83DA1B00432AB4 /* RealmUser.swift in Sources */,
 				F01E949C1FBADBED006CDF5A /* Ingridient.swift in Sources */,
+				F02189691FC8686A00DD187E /* RealmDeletedUsersEmail.swift in Sources */,
 				F01BFD9B1FB9FE1F00E907D4 /* AddFoodViewController.swift in Sources */,
 				F0132A061FBA46B900CEC13B /* AddIngridientViewController.swift in Sources */,
 				F0412EDB1FB9A1D00014BEB0 /* Food.swift in Sources */,
