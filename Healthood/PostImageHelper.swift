@@ -17,30 +17,37 @@ class PostImageHelper{
         self.serverPath = (UIApplication.shared.delegate as! AppDelegate).dataBaseDelegate.serverPath
     }
     
-    func myImageUploadRequest(with image: UIImage, for name: String, using dbType: DataBaseType, imgType: ImageType) -> String?
-    {
-        let serverURL = URL(string: "http://" + self.serverPath + "/postImage.php")
+    func myImageUploadRequest(with image: UIImage, for name: String, using db: DataBaseProtocol, imgType: ImageType){
+        let serverURL = URL(string: "http://" + self.serverPath + "/healt/postImage.php")
         var request = URLRequest(url: serverURL!)
         request.httpMethod = "POST"
         
         let param = [
             "name"  : String.SHA256(name + String.randomString(length: 15))! + ".jpg",
-            "dbType"    : dbType.rawValue,
+            "dbType"    : db.dataBaseType.rawValue,
             "imgType"   : imgType.rawValue
         ]
         let boundary = generateBoundaryString()        
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
         let imageData = UIImageJPEGRepresentation(image, 0.8)
         
-        if(imageData==nil)  { return nil }
+        if(imageData==nil)  { return }
         request.httpBody = createBodyWithParameters(parameters: param, filePathKey: "file", imageDataKey: imageData! as NSData, boundary: boundary) as Data
-
+        
         let task = URLSession.shared.dataTask(with: request){
             data, response, error in
             if error != nil{
                 print("error = \(error!)")
             }
-            
+            if imgType == .food{
+                DispatchQueue.main.async {
+                    try? db.addFoodImagePath(for: name, with: "/\(db.dataBaseType.rawValue)/\(ImageType.food.rawValue)/\(String(describing: param["name"]!))")
+                }
+            }else{
+                DispatchQueue.main.async {
+                    try? db.changeUserProfileImage(with: param["name"]!, for: UserDefaults.standard.object(forKey: "logInUserId") as! String)
+                }
+            }
             print("*****response = \(response!)")
             let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
             print("****** response data = \(responseString!)")
@@ -54,7 +61,6 @@ class PostImageHelper{
             }
         }
         task.resume()
-        return param["name"]
     }
     
     

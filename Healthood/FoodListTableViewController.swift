@@ -19,9 +19,9 @@ class FoodListTableViewController: UITableViewController {
     }
     /************* Outlets ***************/
     let addButton = UIButton.init(type: .custom)
-    var selectedRowIndexPath: IndexPath?
     /************* Variables *************/
-    var foodArray = [Food()]
+    var foodArray = [Food]()
+    var dataBaseDelegate: DataBaseProtocol?
     var cellHeights: [CGFloat] = []
     let kCloseCellHeight: CGFloat = 107
     let kOpenCellHeight: CGFloat = 390
@@ -29,6 +29,12 @@ class FoodListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.dataBaseDelegate = (UIApplication.shared.delegate as! AppDelegate).dataBaseDelegate
+        if let db = self.dataBaseDelegate{
+            if let dbResult = try? db.getFoods(){
+                self.foodArray = dbResult                
+            }
+        }
         setup()
     }
     
@@ -44,6 +50,16 @@ class FoodListTableViewController: UITableViewController {
                     cellHeights.append(kCloseCellHeight)
                     tableView.reloadData()
                 }
+            }
+        }else if segue.identifier == "backToFoodListSegue"{
+            let indexPathForSelectedRow = tableView.indexPathForSelectedRow!
+            cellHeights[indexPathForSelectedRow.row] = kCloseCellHeight
+            if let cell = tableView.cellForRow(at: indexPathForSelectedRow) as? FoldingCell{
+                cell.unfold(false, animated: true, completion: nil)
+                UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseOut, animations: { _ in
+                    self.tableView.beginUpdates()
+                    self.tableView.endUpdates()
+                }, completion: nil)
             }
         }
     }
@@ -70,14 +86,7 @@ class FoodListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if let selectedRow = self.selectedRowIndexPath{
-//            self.tableView(self.tableView, didDeselectRowAt: selectedRow)
-//            self.selectedRowIndexPath = nil
-//        }
-        guard case let cell as FoldingCell = tableView.cellForRow(at: indexPath) else {
-            selectedRowIndexPath = indexPath
-            return
-        }
+        guard case let cell as FoldingCell = tableView.cellForRow(at: indexPath) else { return }
         
         var duration = 0.0
         if cellHeights[indexPath.row] == kCloseCellHeight { // open cell

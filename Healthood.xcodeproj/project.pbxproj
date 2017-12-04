@@ -35,6 +35,7 @@
 		F06F14DF1FBA02A800C77EFF /* IngridientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06F14DE1FBA02A800C77EFF /* IngridientTableViewCell.swift */; };
 		F0829AFB1FAB4BD60026665E /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0829AFA1FAB4BD60026665E /* FoodTableViewCell.swift */; };
 		F0AC49391FB205FC004D3AED /* DateBaseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AC49381FB205FC004D3AED /* DateBaseErrors.swift */; };
+		F0AD36FF1FD5C3330004D388 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD36FE1FD5C3330004D388 /* Rate.swift */; };
 		F0C284451FAB311A005DAF5B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C284441FAB311A005DAF5B /* ProfileViewController.swift */; };
 		F0C284491FAB3797005DAF5B /* FoodListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C284481FAB3797005DAF5B /* FoodListTableViewController.swift */; };
 		F0D864511FB8B796001ECFBC /* DataBaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D864501FB8B796001ECFBC /* DataBaseType.swift */; };
@@ -100,6 +101,7 @@
 		F06F14DE1FBA02A800C77EFF /* IngridientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientTableViewCell.swift; sourceTree = "<group>"; };
 		F0829AFA1FAB4BD60026665E /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		F0AC49381FB205FC004D3AED /* DateBaseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBaseErrors.swift; sourceTree = "<group>"; };
+		F0AD36FE1FD5C3330004D388 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		F0C284441FAB311A005DAF5B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F0C284481FAB3797005DAF5B /* FoodListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListTableViewController.swift; sourceTree = "<group>"; };
 		F0D864501FB8B796001ECFBC /* DataBaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseType.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 				F0F962B01F83CF3700432AB4 /* User.swift */,
 				F0412EDA1FB9A1D00014BEB0 /* Food.swift */,
 				F01E949B1FBADBED006CDF5A /* Ingridient.swift */,
+				F0AD36FE1FD5C3330004D388 /* Rate.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				F0C284451FAB311A005DAF5B /* ProfileViewController.swift in Sources */,
 				F0248DEE1FB71CCF001EB309 /* DateBaseFixture.swift in Sources */,
 				F0AC49391FB205FC004D3AED /* DateBaseErrors.swift in Sources */,
+				F0AD36FF1FD5C3330004D388 /* Rate.swift in Sources */,
 				F011AB3E1F7E83EB0040B2B7 /* RegisterViewController.swift in Sources */,
 				F0F962B11F83CF3700432AB4 /* User.swift in Sources */,
 			);

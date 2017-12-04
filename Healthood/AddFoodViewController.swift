@@ -49,14 +49,12 @@ class AddFoodViewController: UIViewController, UITableViewDataSource, UITableVie
             
             guard let calories = Int(caloriesText), let duration = Int(durationText), let proteins = Int(proteinText), let fat = Int(fatText), let carbo = Int(carboText), let sugar = Int(sugarText) else { throw FoodListErrors.invalidType }
             
-            if let db = dataBaseDelegate{
+            if let db = self.dataBaseDelegate{
                 if let user = try db.getUser(with: UserDefaults.standard.object(forKey: "logInUserId") as! String){
-                    self.food = Food(owner: user, image: image, ingridients: ingridients, title: name, description: description, durationTime: duration, calories: calories, protein: proteins, fat: fat, carbohydrates: carbo, sugar: sugar)
-
-                    if let imageName = self.postImageHelper.myImageUploadRequest(with: food!.image, for: self.food!.id, using: db.dataBaseType, imgType: .food){
-                        food?.imagePath = "/\(db.dataBaseType.rawValue)/\(ImageType.food.rawValue)/\(imageName)"
-                        try db.addFood(with: food!)
-                    }
+                    
+                    self.food = Food(owner: user, image: image, ingridients: self.ingridients, title: name, description: description, durationTime: duration, calories: calories, protein: proteins, fat: fat, carbohydrates: carbo, sugar: sugar)
+                    try! db.addFood(with: self.food!)
+                    self.postImageHelper.myImageUploadRequest(with: self.food!.image!, for: self.food!.id, using: db, imgType: .food)
                 }
             }
             performSegue(withIdentifier: "correctAddFoodSegue", sender: self)
@@ -115,7 +113,9 @@ extension AddFoodViewController: UIImagePickerControllerDelegate, UINavigationCo
         })
         
         allertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        present(allertController, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.present(allertController, animated: true, completion: nil)
+        }
     }
     
     internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

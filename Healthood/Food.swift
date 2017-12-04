@@ -12,13 +12,13 @@ import UIKit
 class Food{
     var id: String
     var owner: User
-    var image: UIImage
+    var image: UIImage?
     var imagePath: String?
     var data: Date
     var ingridients: [Ingridient]
     var title: String
     var description: String
-    var rating: [Int]
+    var rating: Rate
     var durationTime: Int
     var calories: Int
     var protein: Int
@@ -34,13 +34,33 @@ class Food{
         self.ingridients = ingridients
         self.title = title
         self.description = description
-        self.rating = [0]
+        self.rating = Rate(sum: 0, count: 0)
         self.durationTime = durationTime
         self.calories = calories
         self.protein = protein
         self.fat = fat
         self.carbohydrates = carbohydrates
         self.sugar = sugar
+    }
+    
+    init(realmFood: RealmFood){
+        self.id = realmFood.id
+        self.owner = User(realmUser: realmFood.owner!)
+        self.data = realmFood.data
+        self.title = realmFood.title
+        self.description = realmFood.descriptionn
+        self.durationTime = realmFood.durationTime
+        self.calories = realmFood.calories
+        self.protein = realmFood.protein
+        self.fat = realmFood.fat
+        self.carbohydrates = realmFood.carbohydrates
+        self.sugar = realmFood.sugar
+        self.rating = Rate(realmRate: realmFood.rating!)
+        self.ingridients = [Ingridient]()
+        self.imagePath = realmFood.imagePath
+        for realmIngridient in realmFood.ingridients{
+            self.ingridients.append(Ingridient(realmIngridient: realmIngridient))
+        }
     }
     
     init(){
@@ -51,7 +71,7 @@ class Food{
         self.ingridients = []
         self.title = "Bułka z syznka i pomidorem"
         self.description = "Pokrók bułkę, pokrój pomidora, nałóż szynke na bułkę, nałóż pomidora"
-        self.rating = [4]
+        self.rating = Rate(sum: 0, count: 0)
         self.durationTime = 10
         self.calories = 100
         self.protein = 32

@@ -55,14 +55,20 @@ class FoodTableViewCell: FoldingCell {
             for titleLabel in titleLabels{
                 titleLabel.text = food.title
             }
-            let avgRate = Double.average(from: food.rating)
+            let avgRate = food.rating.count > 0 ? Double(food.rating.sum/food.rating.count) : 0
             for rateLabel in rateLabels{
                 rateLabel.text = "Ocena: \(avgRate)/5"
             }
             for foodImage in foodImages{
-                foodImage.image = food.image
+                if let imagePath = food.imagePath{
+                    let imageURL = "http://127.0.0.1/healt/" + imagePath
+                    foodImage.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.jpg"))
+                }
             }
-            if let profileImage = food.owner.profileImage { self.userProfileImage.image = profileImage }
+            if let profileImagePath = food.owner.profileImagePath {
+                let imageURL = "http://127.0.0.1" + profileImagePath
+                self.userProfileImage.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.jpg"))                
+            }
             self.dataLabel.text = String(describing: food.data)
             self.nameLabel.text = food.owner.name + " " + food.owner.surName
             self.caloriesLabel.text = "Kalorie: \(food.calories) kcal"

@@ -39,7 +39,7 @@ class SingleDishViewController: UIViewController {
             titleLabel.text = food.title
             autorLabel.text = food.owner.name + " " + food.owner.surName
             durationLabel.text = "Czas: \(food.durationTime) min."
-            let avgRate = Double.average(from: food.rating)
+            let avgRate = food.rating.count > 0 ? Double(food.rating.sum/food.rating.count) : 0
             rateLabel.text = "Ocena: \(avgRate)/5"
             caloriesLabel.text = "Kalorie: \(food.calories) kcal"
             proteinLabel.text = "\(food.protein) g"
@@ -53,8 +53,14 @@ class SingleDishViewController: UIViewController {
             ingridientListHeight.constant = CGFloat(food.ingridients.count * 20) + 20.0
             ingridientsTextView.text = ingridientText
             descriptionTextView.text = food.description
-            authorImageView.image = food.owner.profileImage
-            foodImageView.image = food.image
+            if let profileImagePath = food.owner.profileImagePath {
+                let imageURL = "http://127.0.0.1" + profileImagePath
+                self.authorImageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.jpg"))
+            }
+            if let imagePath = food.imagePath{
+                let imageURL = "http://127.0.0.1/healt/" + imagePath
+                foodImageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.jpg"))
+            }
         }
     }
 }

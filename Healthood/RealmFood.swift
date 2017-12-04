@@ -29,7 +29,7 @@ class RealmFood: Object{
         self.init()
         self.id = food.id
         self.owner = user
-        self.imagePath = food.imagePath!
+        self.imagePath = (food.imagePath ?? "")!
         self.data = Date()
         var ingridients = [RealmIngridient]()
         for i in food.ingridients{
@@ -38,7 +38,7 @@ class RealmFood: Object{
         self.ingridients = List(ingridients)
         self.title = food.title
         self.descriptionn = food.description
-        self.rating = RealmRate(rates: food.rating)
+        self.rating = RealmRate(rate: food.rating)
         self.durationTime = food.durationTime
         self.calories = food.calories
         self.protein = food.calories

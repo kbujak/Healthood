@@ -89,13 +89,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         profileImageView.image = image
-        DispatchQueue.main.async {
             if let db = self.dataBaseDelegate{
-                if let imageName = self.postImageHelper.myImageUploadRequest(with: image, for: self.nameLabel.text!, using: db.dataBaseType, imgType: .profile){
-                    try? db.changeUserProfileImage(with: imageName, for: UserDefaults.standard.object(forKey: "logInUserId") as! String)
-                }
+                self.postImageHelper.myImageUploadRequest(with: image, for: self.nameLabel.text!, using: db, imgType: .profile)                
             }
-        }
-        dismiss(animated:true, completion: nil)
+            self.dismiss(animated:true, completion: nil)
     }
 }

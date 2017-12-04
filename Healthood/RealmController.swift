@@ -19,7 +19,7 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
         return "http://\(serverPath):\(port)"   // "http://SERVER_IP"
     }
     var realmPath:String{
-        return "realm://\(serverPath):\(port)/~/Healthood_0.4"  //"realm://SERVER_IP:9080/~/Healthood_*"
+        return "realm://\(serverPath):\(port)/~/Healthood_0.6"  //"realm://SERVER_IP:9080/~/Healthood_*"
     }
     var dataBaseIP: String{
         return serverPath
@@ -72,7 +72,7 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
         if let realm = self.realm{
             if let realmUser = realm.objects(RealmUser.self).filter("id == %@", userId).first{
                 try! realm.write {
-                    realmUser.profileImagePath = "/realm/" + imageName
+                    realmUser.profileImagePath = "/healt/realm/profile/" + imageName
                 }
             }else{ throw DateBaseErrors.invalidUserId }
         }else{ throw DateBaseErrors.connectionError }
@@ -86,6 +86,26 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
                     realm.add(realmFood)
                 }
             }else{ throw DateBaseErrors.invalidUserId }
+        }else{ throw DateBaseErrors.connectionError }
+    }
+    
+    func addFoodImagePath(for foodID: String, with path: String) throws {
+        if let realm = self.realm{
+            if let realmFood = realm.objects(RealmFood.self).filter("id == %@", foodID).first{
+                try realm.write {
+                    realmFood.imagePath = path
+                }
+            }
+        }else{ throw DateBaseErrors.connectionError }
+    }
+    
+    func getFoods() throws -> [Food] {
+        if let realm = self.realm{
+            var foodArray = [Food]()
+            for realmFood in realm.objects(RealmFood.self){
+                foodArray.append(Food(realmFood: realmFood))
+            }
+            return foodArray
         }else{ throw DateBaseErrors.connectionError }
     }
 }

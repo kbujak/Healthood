@@ -13,11 +13,9 @@ class RealmRate: Object{
     dynamic var sum: Int = 0
     dynamic var count: Int = 0
     
-    convenience init(rates: [Int]){
+    convenience init(rate: Rate){
         self.init()
-        for rate in rates{
-            self.sum += rate
-        }
-        self.count = rates.count
+        self.sum = rate.sum
+        self.count = rate.count
     }
 }
