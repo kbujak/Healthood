@@ -18,5 +18,6 @@ protocol DataBaseProtocol{
     func getFoods() throws -> [Food]
     func changeUserProfileImage(with imageName: String, for userId: String) throws
     func addFood(with food: Food) throws
-    func addFoodImagePath(for foodID: String, with path: String) throws 
+    func addFoodImagePath(for foodID: String, with path: String) throws
+    func test(with ingridientArray: [Ingridient]) throws -> [String: Double]
 }

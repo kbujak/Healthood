@@ -19,7 +19,7 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
         return "http://\(serverPath):\(port)"   // "http://SERVER_IP"
     }
     var realmPath:String{
-        return "realm://\(serverPath):\(port)/~/Healthood_0.6"  //"realm://SERVER_IP:9080/~/Healthood_*"
+        return "realm://\(serverPath):\(port)/~/Healthood_0.7"  //"realm://SERVER_IP:9080/~/Healthood_*"
     }
     var dataBaseIP: String{
         return serverPath
@@ -106,6 +106,41 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
                 foodArray.append(Food(realmFood: realmFood))
             }
             return foodArray
+        }else{ throw DateBaseErrors.connectionError }
+    }
+    
+    func test(with ingridientArray: [Ingridient]) throws -> [String : Double] {
+        if let realm = self.realm{
+            var realmIngridients = [RealmIngridient]()
+            for ingridient in ingridientArray{
+                realmIngridients.append(RealmIngridient(ingridient: ingridient))
+            }
+            let addingStart = DispatchTime.now()
+            try realm.write {
+                realm.add(realmIngridients)
+            }
+            let addingEnd = DispatchTime.now()
+            let selectingStart = DispatchTime.now()
+            realm.objects(RealmIngridient.self)
+            let selectingEnd = DispatchTime.now()
+            let modifingStart = DispatchTime.now()
+            try realm.write {
+                for realmIngridient in realmIngridients{
+                    realmIngridient.name = "modified"
+                }
+            }
+            let modifingEnd = DispatchTime.now()
+            //            let deletingStart = DispatchTime.now()
+            //            try realm.write {
+            //                realm.delete(realmIngridients)
+            //            }
+            //            let deletingEnd = DispatchTime.now()
+            return [
+                "insert": Double(addingEnd.uptimeNanoseconds - addingStart.uptimeNanoseconds)/1000000000,
+                "select": Double(selectingEnd.uptimeNanoseconds - selectingStart.uptimeNanoseconds)/1000000000,
+                "update": Double(modifingEnd.uptimeNanoseconds - modifingStart.uptimeNanoseconds)/1000000000
+                //                "deleting": Double(deletingEnd.uptimeNanoseconds - deletingStart.uptimeNanoseconds)/1000000000
+            ]
         }else{ throw DateBaseErrors.connectionError }
     }
 }

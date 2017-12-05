@@ -24,4 +24,10 @@ class Ingridient{
         self.count = realmIngridient.count
         self.unit = realmIngridient.unit
     }
+    
+    init(){
+        self.name = String.randomString(length: 5)
+        self.count = 23
+        self.unit = "g"
+    }
 }

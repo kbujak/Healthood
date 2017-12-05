@@ -38,6 +38,7 @@
 		F0AD36FF1FD5C3330004D388 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD36FE1FD5C3330004D388 /* Rate.swift */; };
 		F0C284451FAB311A005DAF5B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C284441FAB311A005DAF5B /* ProfileViewController.swift */; };
 		F0C284491FAB3797005DAF5B /* FoodListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C284481FAB3797005DAF5B /* FoodListTableViewController.swift */; };
+		F0C7231C1FD6B6CF00F9EF14 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C7231B1FD6B6CF00F9EF14 /* TestViewController.swift */; };
 		F0D864511FB8B796001ECFBC /* DataBaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D864501FB8B796001ECFBC /* DataBaseType.swift */; };
 		F0DF556A1FB1DBF50013A5EB /* SingleDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DF55691FB1DBF50013A5EB /* SingleDishViewController.swift */; };
 		F0F2D9E41F8D54690019AB6C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F2D9E31F8D54690019AB6C /* UIViewController.swift */; };
@@ -104,6 +105,7 @@
 		F0AD36FE1FD5C3330004D388 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		F0C284441FAB311A005DAF5B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F0C284481FAB3797005DAF5B /* FoodListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListTableViewController.swift; sourceTree = "<group>"; };
+		F0C7231B1FD6B6CF00F9EF14 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		F0D864501FB8B796001ECFBC /* DataBaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseType.swift; sourceTree = "<group>"; };
 		F0DF55691FB1DBF50013A5EB /* SingleDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDishViewController.swift; sourceTree = "<group>"; };
 		F0EFC4E91F8BE13A00998AA9 /* XButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XButton.png; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				F0DF55691FB1DBF50013A5EB /* SingleDishViewController.swift */,
 				F01BFD9A1FB9FE1F00E907D4 /* AddFoodViewController.swift */,
 				F0132A051FBA46B900CEC13B /* AddIngridientViewController.swift */,
+				F0C7231B1FD6B6CF00F9EF14 /* TestViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 			files = (
 				F0F2DFD51FBAFFDD005E3D8B /* RealmRate.swift in Sources */,
 				F06F14DF1FBA02A800C77EFF /* IngridientTableViewCell.swift in Sources */,
+				F0C7231C1FD6B6CF00F9EF14 /* TestViewController.swift in Sources */,
 				F01590981F79663E0078266C /* LoginViewController.swift in Sources */,
 				F0132A081FBA4A7200CEC13B /* FoodListErrors.swift in Sources */,
 				F0412ED91FB994640014BEB0 /* NetworkErrors.swift in Sources */,

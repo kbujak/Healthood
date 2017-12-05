@@ -69,8 +69,8 @@ class Food{
         self.image = #imageLiteral(resourceName: "LoginBackground2")
         self.data = Date()
         self.ingridients = []
-        self.title = "Bułka z syznka i pomidorem"
-        self.description = "Pokrók bułkę, pokrój pomidora, nałóż szynke na bułkę, nałóż pomidora"
+        self.title = String.randomString(length: 5)
+        self.description = String.randomString(length: 7)
         self.rating = Rate(sum: 0, count: 0)
         self.durationTime = 10
         self.calories = 100

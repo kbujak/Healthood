@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Healthood/RealmController.swift"
-            timestampString = "534106885.823436"
+            timestampString = "534173188.800995"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Healthood/RealmController.swift"
-            timestampString = "534106885.823597"
+            timestampString = "534173188.801148"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "105"
@@ -86,7 +86,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Healthood/RealmFood.swift"
@@ -99,14 +99,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Healthood.RealmFood.init(food: Healthood.Food, for: Healthood.RealmUser) -&gt; Healthood.RealmFood"
                   moduleName = "Healthood"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Booyac/Developer/Healthood/Healthood/RealmFood.swift"
-                  timestampString = "534106885.915825"
+                  timestampString = "534166563.985923"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "32"
@@ -114,14 +114,14 @@
                   offsetFromSymbolStart = "387">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Optional&lt;Swift.String&gt; in Healthood.RealmFood.init(food: Healthood.Food, for: Healthood.RealmUser) -&gt; Healthood.RealmFood"
                   moduleName = "Healthood"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Booyac/Developer/Healthood/Healthood/RealmFood.swift"
-                  timestampString = "534106885.918472"
+                  timestampString = "534166563.988614"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "32"
@@ -170,12 +170,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Healthood/Food.swift"
-            timestampString = "534106885.823766"
+            timestampString = "534173188.801308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
             landmarkName = "init(realmFood:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Healthood/TestViewController.swift"
+            timestampString = "534173188.801427"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "testButtonAct(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Healthood/TestViewController.swift"
+            timestampString = "534173188.801933"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "testButtonAct(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Healthood/TestViewController.swift"
+            timestampString = "534173188.802228"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "testButtonAct(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Healthood/TestViewController.swift"
+            timestampString = "534173188.802505"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "testButtonAct(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
