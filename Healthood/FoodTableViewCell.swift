@@ -61,13 +61,11 @@ class FoodTableViewCell: FoldingCell {
             }
             for foodImage in foodImages{
                 if let imagePath = food.imagePath{
-                    let imageURL = "http://127.0.0.1/healt/" + imagePath
-                    foodImage.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.jpg"))
+                    foodImage.image = UIImage(contentsOfFile: imagePath)
                 }
             }
-            if let profileImagePath = food.owner.profileImagePath {
-                let imageURL = "http://127.0.0.1" + profileImagePath
-                self.userProfileImage.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.jpg"))                
+            if let profileImagePath = food.owner.profileImagePath {                
+                self.userProfileImage.image = UIImage(contentsOfFile: profileImagePath)
             }
             self.dataLabel.text = String(describing: food.data)
             self.nameLabel.text = food.owner.name + " " + food.owner.surName

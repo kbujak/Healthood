@@ -53,8 +53,14 @@ class AddFoodViewController: UIViewController, UITableViewDataSource, UITableVie
                 if let user = try db.getUser(with: UserDefaults.standard.object(forKey: "logInUserId") as! String){
                     
                     self.food = Food(owner: user, image: image, ingridients: self.ingridients, title: name, description: description, durationTime: duration, calories: calories, protein: proteins, fat: fat, carbohydrates: carbo, sugar: sugar)
+                    let imagePath = "/Users/Booyac/Documents/Pictures/" + db.dataBaseType.rawValue + "/food/" + String.SHA256(self.food!.id)! + ".jpg"
+                    
                     try! db.addFood(with: self.food!)
-                    self.postImageHelper.myImageUploadRequest(with: self.food!.image!, for: self.food!.id, using: db, imgType: .food)
+                    try! db.addFoodImagePath(for: self.food!.id, with: imagePath)
+                    
+                    if let imageData = UIImageJPEGRepresentation(image, 0.5){
+                        FileManager.default.createFile(atPath: imagePath, contents: imageData)
+                    }
                 }
             }
             performSegue(withIdentifier: "correctAddFoodSegue", sender: self)
@@ -113,9 +119,7 @@ extension AddFoodViewController: UIImagePickerControllerDelegate, UINavigationCo
         })
         
         allertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        DispatchQueue.main.async {
-            self.present(allertController, animated: true, completion: nil)
-        }
+        self.present(allertController, animated: true, completion: nil)
     }
     
     internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

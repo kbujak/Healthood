@@ -54,12 +54,10 @@ class SingleDishViewController: UIViewController {
             ingridientsTextView.text = ingridientText
             descriptionTextView.text = food.description
             if let profileImagePath = food.owner.profileImagePath {
-                let imageURL = "http://127.0.0.1" + profileImagePath
-                self.authorImageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.jpg"))
+                self.authorImageView.image = UIImage(contentsOfFile: profileImagePath)
             }
             if let imagePath = food.imagePath{
-                let imageURL = "http://127.0.0.1/healt/" + imagePath
-                foodImageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.jpg"))
+                foodImageView.image = UIImage(contentsOfFile: imagePath)
             }
         }
     }

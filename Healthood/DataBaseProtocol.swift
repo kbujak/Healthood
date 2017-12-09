@@ -10,7 +10,6 @@ import Foundation
 
 protocol DataBaseProtocol{
     var dataBaseType: DataBaseType { set get }
-    var dataBaseIP: String { get }
     
     func registerUser(with user: User) throws 
     func loginUser(with email: String, and password: String) throws -> User?

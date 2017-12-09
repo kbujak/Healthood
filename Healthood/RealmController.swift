@@ -13,29 +13,15 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
         
     var notificationToken: NotificationToken!
     var realm: Realm!
-    let port = 9080
     var dataBaseType: DataBaseType = .realm
-    var realmServerPath:String {
-        return "http://\(serverPath):\(port)"   // "http://SERVER_IP"
-    }
-    var realmPath:String{
-        return "realm://\(serverPath):\(port)/~/Healthood_0.7"  //"realm://SERVER_IP:9080/~/Healthood_*"
-    }
-    var dataBaseIP: String{
-        return serverPath
+    var realmPath: String{
+        return "/Users/Booyac/Developer/Healthood/realm/Healthood.realm"  //"realm://SERVER_IP:9080/~/Healthood_*"
     }
     
     override init(){
         super.init()
-        SyncUser.logIn(with: .usernamePassword(username: self.dbUser, password: self.dbUserPassword, register: false), server: URL(string: self.realmServerPath)!){
-            user, error in
-            guard let user = user else { return }
-            DispatchQueue.main.async {
-                let configuration = Realm.Configuration(syncConfiguration: SyncConfiguration(user: user, realmURL: URL(string: self.realmPath)!))
-                guard let realm = try? Realm(configuration: configuration) else { return }
-                self.realm = realm
-            }
-        }        
+        let config = Realm.Configuration(fileURL: URL(fileURLWithPath: realmPath))
+        self.realm = try? Realm(configuration: config)
     }
     
     public func registerUser(with userData: User) throws {
@@ -68,11 +54,11 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
         }else{ throw DateBaseErrors.connectionError }
     }
     
-    func changeUserProfileImage(with imageName: String, for userId: String) throws {
+    func changeUserProfileImage(with imagePath: String, for userId: String) throws {
         if let realm = self.realm{
             if let realmUser = realm.objects(RealmUser.self).filter("id == %@", userId).first{
                 try! realm.write {
-                    realmUser.profileImagePath = "/healt/realm/profile/" + imageName
+                    realmUser.profileImagePath = imagePath
                 }
             }else{ throw DateBaseErrors.invalidUserId }
         }else{ throw DateBaseErrors.connectionError }

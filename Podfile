@@ -7,6 +7,7 @@ target 'Healthood' do
     pod 'RealmSwift', '~> 2.10.2'
     pod 'FoldingCell'
     pod 'SDWebImage', '~> 4.0'
+    pod 'SQLite.swift', '~> 0.11.4'
 
   # Pods for Healthood
 

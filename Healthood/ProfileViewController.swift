@@ -48,8 +48,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 if let logInUser = logInUser{
                     if logInUser.profileImagePath != nil{
                         if let db = dataBaseDelegate{
-                            let imageURL = "http://" + db.dataBaseIP + logInUser.profileImagePath!
-                            profileImageView.sd_setImage(with: URL(string: imageURL), placeholderImage: UIImage(named: "placeholder.jpg"))
+                            profileImageView.image = UIImage(contentsOfFile: logInUser.profileImagePath!)
                         }
                     }
                     loginLabel.text = logInUser.login
@@ -65,32 +64,40 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         allertController.addAction(UIAlertAction(title: "Take photo", style: .default){
             actionAllert in
             if UIImagePickerController.isSourceTypeAvailable(.camera){
+                DispatchQueue.main.async {
                 let imagePicker = UIImagePickerController()
                 imagePicker.delegate = self
                 imagePicker.sourceType = .camera
                 imagePicker.allowsEditing = true
                 self.present(imagePicker, animated: true, completion: nil)
+                }
             }
         })
         allertController.addAction(UIAlertAction(title: "Choose photo", style: .default){
             actionAllert in
             if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+                DispatchQueue.main.async {
                 let imagePicker = UIImagePickerController()
                 imagePicker.delegate = self
                 imagePicker.sourceType = .photoLibrary
                 imagePicker.allowsEditing = true
                 self.present(imagePicker, animated: true, completion: nil)
+                }
             }
         })
         allertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        present(allertController, animated: true, completion: nil)
+        self.present(allertController, animated: true, completion: nil)
     }
     
     internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         profileImageView.image = image
             if let db = self.dataBaseDelegate{
-                self.postImageHelper.myImageUploadRequest(with: image, for: self.nameLabel.text!, using: db, imgType: .profile)                
+                let imagePath = "/Users/Booyac/Documents/Pictures/" + db.dataBaseType.rawValue + "/profile/" + String.SHA256(self.nameLabel.text! + String.randomString(length: 15))! + ".jpg"
+                try? db.changeUserProfileImage(with: imagePath, for: UserDefaults.standard.object(forKey: "logInUserId") as! String)
+                if let imageData = UIImageJPEGRepresentation(image, 0.5){
+                    FileManager.default.createFile(atPath: imagePath, contents: imageData)
+                }
             }
             self.dismiss(animated:true, completion: nil)
     }
