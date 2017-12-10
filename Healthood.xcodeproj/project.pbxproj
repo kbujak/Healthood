@@ -32,10 +32,16 @@
 		F0248DEE1FB71CCF001EB309 /* DateBaseFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0248DED1FB71CCF001EB309 /* DateBaseFixture.swift */; };
 		F0412ED91FB994640014BEB0 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0412ED81FB994640014BEB0 /* NetworkErrors.swift */; };
 		F0412EDB1FB9A1D00014BEB0 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0412EDA1FB9A1D00014BEB0 /* Food.swift */; };
+		F06CDB9C1FDC414F008B43B4 /* SQliteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06CDB9B1FDC414F008B43B4 /* SQliteController.swift */; };
 		F06F14DF1FBA02A800C77EFF /* IngridientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06F14DE1FBA02A800C77EFF /* IngridientTableViewCell.swift */; };
 		F0829AFB1FAB4BD60026665E /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0829AFA1FAB4BD60026665E /* FoodTableViewCell.swift */; };
 		F0AC49391FB205FC004D3AED /* DateBaseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AC49381FB205FC004D3AED /* DateBaseErrors.swift */; };
 		F0AD36FF1FD5C3330004D388 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD36FE1FD5C3330004D388 /* Rate.swift */; };
+		F0BAD4AC1FDC50E30007395E /* SQliteUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAD4AB1FDC50E30007395E /* SQliteUser.swift */; };
+		F0BAD4AE1FDC695E0007395E /* SQliteIngridientTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAD4AD1FDC695E0007395E /* SQliteIngridientTable.swift */; };
+		F0BAD4B01FDC6A090007395E /* SQliteRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAD4AF1FDC6A090007395E /* SQliteRate.swift */; };
+		F0BAD4B21FDC6B5F0007395E /* SQliteFoodTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAD4B11FDC6B5F0007395E /* SQliteFoodTable.swift */; };
+		F0BAD4B41FDC6CD00007395E /* SQliteRecipeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAD4B31FDC6CD00007395E /* SQliteRecipeTable.swift */; };
 		F0C284451FAB311A005DAF5B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C284441FAB311A005DAF5B /* ProfileViewController.swift */; };
 		F0C284491FAB3797005DAF5B /* FoodListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C284481FAB3797005DAF5B /* FoodListTableViewController.swift */; };
 		F0C7231C1FD6B6CF00F9EF14 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C7231B1FD6B6CF00F9EF14 /* TestViewController.swift */; };
@@ -99,10 +105,16 @@
 		F0248DED1FB71CCF001EB309 /* DateBaseFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBaseFixture.swift; sourceTree = "<group>"; };
 		F0412ED81FB994640014BEB0 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		F0412EDA1FB9A1D00014BEB0 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		F06CDB9B1FDC414F008B43B4 /* SQliteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQliteController.swift; sourceTree = "<group>"; };
 		F06F14DE1FBA02A800C77EFF /* IngridientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientTableViewCell.swift; sourceTree = "<group>"; };
 		F0829AFA1FAB4BD60026665E /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		F0AC49381FB205FC004D3AED /* DateBaseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBaseErrors.swift; sourceTree = "<group>"; };
 		F0AD36FE1FD5C3330004D388 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
+		F0BAD4AB1FDC50E30007395E /* SQliteUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQliteUser.swift; sourceTree = "<group>"; };
+		F0BAD4AD1FDC695E0007395E /* SQliteIngridientTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQliteIngridientTable.swift; sourceTree = "<group>"; };
+		F0BAD4AF1FDC6A090007395E /* SQliteRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQliteRate.swift; sourceTree = "<group>"; };
+		F0BAD4B11FDC6B5F0007395E /* SQliteFoodTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQliteFoodTable.swift; sourceTree = "<group>"; };
+		F0BAD4B31FDC6CD00007395E /* SQliteRecipeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQliteRecipeTable.swift; sourceTree = "<group>"; };
 		F0C284441FAB311A005DAF5B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F0C284481FAB3797005DAF5B /* FoodListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListTableViewController.swift; sourceTree = "<group>"; };
 		F0C7231B1FD6B6CF00F9EF14 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -260,6 +272,7 @@
 			children = (
 				F0F962AD1F83C17000432AB4 /* RealmController.swift */,
 				F0248DED1FB71CCF001EB309 /* DateBaseFixture.swift */,
+				F06CDB9B1FDC414F008B43B4 /* SQliteController.swift */,
 			);
 			name = DataBaseControllers;
 			sourceTree = "<group>";
@@ -271,6 +284,18 @@
 				F06F14DE1FBA02A800C77EFF /* IngridientTableViewCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		F0BAD4AA1FDC50C40007395E /* SQliteModels */ = {
+			isa = PBXGroup;
+			children = (
+				F0BAD4AB1FDC50E30007395E /* SQliteUser.swift */,
+				F0BAD4AD1FDC695E0007395E /* SQliteIngridientTable.swift */,
+				F0BAD4AF1FDC6A090007395E /* SQliteRate.swift */,
+				F0BAD4B11FDC6B5F0007395E /* SQliteFoodTable.swift */,
+				F0BAD4B31FDC6CD00007395E /* SQliteRecipeTable.swift */,
+			);
+			name = SQliteModels;
 			sourceTree = "<group>";
 		};
 		F0D8644F1FB8B77D001ECFBC /* Enums */ = {
@@ -328,6 +353,7 @@
 		F0F962AF1F83CF2800432AB4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F0BAD4AA1FDC50C40007395E /* SQliteModels */,
 				F0F962B21F83D9FC00432AB4 /* RealmModels */,
 				F0F962B01F83CF3700432AB4 /* User.swift */,
 				F0412EDA1FB9A1D00014BEB0 /* Food.swift */,
@@ -584,7 +610,9 @@
 				F0412ED91FB994640014BEB0 /* NetworkErrors.swift in Sources */,
 				F0C284491FAB3797005DAF5B /* FoodListTableViewController.swift in Sources */,
 				F0DF556A1FB1DBF50013A5EB /* SingleDishViewController.swift in Sources */,
+				F0BAD4AC1FDC50E30007395E /* SQliteUser.swift in Sources */,
 				F01E949E1FBAEDD3006CDF5A /* Double.swift in Sources */,
+				F0BAD4B21FDC6B5F0007395E /* SQliteFoodTable.swift in Sources */,
 				F0F2DFD31FBAFB2D005E3D8B /* RealmFood.swift in Sources */,
 				F0829AFB1FAB4BD60026665E /* FoodTableViewCell.swift in Sources */,
 				F00D0F471F8BBCE7005C2AFD /* String.swift in Sources */,
@@ -594,8 +622,10 @@
 				F0D864511FB8B796001ECFBC /* DataBaseType.swift in Sources */,
 				F0F2DFD71FBB02EF005E3D8B /* ImageType.swift in Sources */,
 				F0F2DFD11FBAFA70005E3D8B /* RealmIngridient.swift in Sources */,
+				F0BAD4B41FDC6CD00007395E /* SQliteRecipeTable.swift in Sources */,
 				F0F962B51F83DA1B00432AB4 /* RealmUser.swift in Sources */,
 				F01E949C1FBADBED006CDF5A /* Ingridient.swift in Sources */,
+				F06CDB9C1FDC414F008B43B4 /* SQliteController.swift in Sources */,
 				F01BFD9B1FB9FE1F00E907D4 /* AddFoodViewController.swift in Sources */,
 				F0132A061FBA46B900CEC13B /* AddIngridientViewController.swift in Sources */,
 				F0412EDB1FB9A1D00014BEB0 /* Food.swift in Sources */,
@@ -603,11 +633,13 @@
 				F00D0F4A1F8BBF22005C2AFD /* RegisterHelper.swift in Sources */,
 				F015909E1F79663E0078266C /* Healthood.xcdatamodeld in Sources */,
 				F0F962AE1F83C17000432AB4 /* RealmController.swift in Sources */,
+				F0BAD4B01FDC6A090007395E /* SQliteRate.swift in Sources */,
 				F01590961F79663E0078266C /* AppDelegate.swift in Sources */,
 				F0C284451FAB311A005DAF5B /* ProfileViewController.swift in Sources */,
 				F0248DEE1FB71CCF001EB309 /* DateBaseFixture.swift in Sources */,
 				F0AC49391FB205FC004D3AED /* DateBaseErrors.swift in Sources */,
 				F0AD36FF1FD5C3330004D388 /* Rate.swift in Sources */,
+				F0BAD4AE1FDC695E0007395E /* SQliteIngridientTable.swift in Sources */,
 				F011AB3E1F7E83EB0040B2B7 /* RegisterViewController.swift in Sources */,
 				F0F962B11F83CF3700432AB4 /* User.swift in Sources */,
 			);

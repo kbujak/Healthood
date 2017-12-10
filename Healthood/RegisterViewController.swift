@@ -46,8 +46,8 @@ class RegisterViewController: UIViewController {
         }catch let dbError as DateBaseErrors{
             errorLabel.isHidden = false
             errorLabel.text = dbError.rawValue
-        }catch is Error{
-            
+        }catch {
+            print(error)
         }
     }
     

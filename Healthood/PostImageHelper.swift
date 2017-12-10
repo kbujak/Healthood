@@ -14,7 +14,7 @@ class PostImageHelper{
     let serverPath: String!
     
     init(){
-        self.serverPath = (UIApplication.shared.delegate as! AppDelegate).dataBaseDelegate.serverPath
+        self.serverPath = "(UIApplication.shared.delegate as! AppDelegate).dataBaseDelegate.serverPath"
     }
     
     func myImageUploadRequest(with image: UIImage, for name: String, using db: DataBaseProtocol, imgType: ImageType){

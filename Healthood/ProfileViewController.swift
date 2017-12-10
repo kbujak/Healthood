@@ -47,9 +47,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             if let logInUser = try? dataBaseDelegate!.getUser(with: logInUserId){
                 if let logInUser = logInUser{
                     if logInUser.profileImagePath != nil{
-                        if let db = dataBaseDelegate{
-                            profileImageView.image = UIImage(contentsOfFile: logInUser.profileImagePath!)
-                        }
+                        profileImageView.image = UIImage(contentsOfFile: logInUser.profileImagePath!)
                     }
                     loginLabel.text = logInUser.login
                     nameLabel.text = "\(logInUser.name) \(logInUser.surName)"

@@ -10,4 +10,5 @@ import Foundation
 
 enum DataBaseType: String{
     case realm = "realm"
+    case sqlite = "sqlite"
 }

@@ -19,8 +19,8 @@ class User{
     var profileImagePath: String?
     var profileImage: UIImage?
     
-    init(name: String, surName: String, login: String, email: String, password: String, profileImagePath: String? = nil, profileImage: UIImage? = nil) {
-        self.id = UUID().uuidString
+    init(id: String? = nil, name: String, surName: String, login: String, email: String, password: String, profileImagePath: String? = nil, profileImage: UIImage? = nil) {
+        self.id = id ?? UUID().uuidString
         self.name = name
         self.surName = surName
         self.login = login

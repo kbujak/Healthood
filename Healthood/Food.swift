@@ -26,10 +26,11 @@ class Food{
     var carbohydrates: Int
     var sugar: Int
     
-    init(owner: User, image: UIImage, ingridients: [Ingridient], title: String, description: String, durationTime: Int, calories: Int, protein: Int, fat: Int, carbohydrates: Int, sugar: Int){
+    init(owner: User, ingridients: [Ingridient], title: String, description: String, durationTime: Int, calories: Int, protein: Int, fat: Int, carbohydrates: Int, sugar: Int, image: UIImage? = nil, imagePath: String? = nil){
         self.id = UUID.init().uuidString
         self.owner = owner
         self.image = image
+        self.imagePath = imagePath
         self.data = Date()
         self.ingridients = ingridients
         self.title = title

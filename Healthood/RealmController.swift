@@ -103,7 +103,9 @@ final class RealmController: DateBaseFixture, DataBaseProtocol{
             }
             let addingStart = DispatchTime.now()
             try realm.write {
-                realm.add(realmIngridients)
+                for realmIngridient in realmIngridients{
+                    realm.add(realmIngridient)
+                }
             }
             let addingEnd = DispatchTime.now()
             let selectingStart = DispatchTime.now()
